@@ -1,19 +1,88 @@
+/*COLORS PALLETE*/
+verdebase = #67CDA7
+verde1 = #07CED2
+verde2 = #419FA2
+verde3 = #165B5C
+turquesa = #07CED2
+
+a
+	transition color .5s ease
+	color verde3
+	&:hover
+		color verde2
+		cursor pointer
+		transition color .5s ease
 h3
 	font-weight 600
 body
 	font-family 'Lato', sans-serif
 	padding-top 50px
 	font-weight 600
-	.map
-		background transparent url(../../images/map.jpg) no-repeat center top
-		background-size cover
-		height 500px
+.navbar-default	
+	background-color verdebase
+	.navbar-brand
+	.navbar-nav>li>a
+		color white
+		transition color .5s ease
+		&:hover
+			color verde3
+			transition color .5s ease
+	.navbar-nav>.active>a
+		background-color verde3
+		color verde1
+		transition background-color .5s ease
+		&:hover
+			background-color verde2
+			color verde3
+			transition background-color .5s ease
+.map
+	background transparent url(../../images/map.jpg) no-repeat center top
+	background-size cover
+	height 500px
+	text-align center
+.spots-list
+	padding-top 30px
+footer
+	color white
+	background verdebase
+	border-top 1px solid verde2
+	height auto
+	text-align center
+	padding-top 30px
+	padding-bottom 10px
+	.social
 		text-align center
-	.spots-list
-		padding-top 30px
+		padding 0
+		li
+			display inline-block
+			margin-right 10px
+			&:last-of-type
+				margin-right 0
+			a
+				font-size 2em
+				transition color .5s ease
+				&:hover
+					transition color .5s ease
+					text-decoration none
+@media screen and (min-width: 768px)
 	footer
-		background #f8f8f8
-		border-top 1px solid #e7e7e7
-		height 150px
-		text-align center
-		padding-top 30px
+		.social-column
+			text-align left
+			.social
+				text-align left
+				padding 0
+				li
+					display inline-block
+					margin-right 10px
+					a
+						font-size 2em
+						transition color .5s ease
+						&:hover
+							transition color .5s ease
+							text-decoration none
+		.contact-column
+			display flex
+			justify-content flex-end
+			height 80px
+			p
+				align-self center

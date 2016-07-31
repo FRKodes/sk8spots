@@ -16,6 +16,7 @@ elixir(function(mix) {
     mix.stylus('app.styl')
     .styles([
     	'bootstrap.css',
+        'icons-font.css',
     	'app.css'
     ],'public/css/all.css', 'public/css')
     .scripts([
