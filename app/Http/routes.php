@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('pages.index');
 });
+
+Route::get('acerca-de', function () {
+    return view('pages.acerca-de');
+});
+
+Route::get('contacto', function () {
+    return view('pages.contacto');
+});
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

@@ -2,30 +2,40 @@
 
 @section('content')
 <div class="container-fluid map">
-	<div class="row">
+	<div class="row" id="map">
 	</div>
 </div>
 
 <div class="container spots-list">
-	<div class="panel panel-default">
-	
-		<div class="panel-heading">
-			<h3 class="panel-title">Panel title</h3>
-		</div>
-		
-		<div class="panel-body">
-			Basic panel example
-		</div>
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+			<div class="panel panel-default">
+			
+				<div class="panel-heading">
+					<h3 class="panel-title">Sk8 Spots cerca de tí</h3>
+				</div>
+				
+				<div class="panel-body">
+					Basic panel example
+				</div>
 
-		<ul class="list-group">
-			<li class="list-group-item">Cras justo odio</li>
-			<li class="list-group-item">Dapibus ac facilisis in</li>
-			<li class="list-group-item">Morbi leo risus</li>
-			<li class="list-group-item">Porta ac consectetur ac</li>
-			<li class="list-group-item">Vestibulum at eros</li>
-		</ul>
+				<ul class="list-group">
+					<li class="list-group-item">{{ getenv('DB_CONNECTION') }}</li>
+					<li class="list-group-item">{{ getenv('DB_HOST')}}</li>
+					<li class="list-group-item">{{ getenv('DB_PORT')}}</li>
+					<li class="list-group-item">{{ getenv('DB_DATABASE')}}</li>
+					<li class="list-group-item">{{ getenv('DB_USERNAME')}}</li>
+					<li class="list-group-item">{{ getenv('DB_PASSWORD')}}</li>
 
+					<li class="list-group-item">Cras justo odio</li>
+					<li class="list-group-item">Dapibus ac facilisis in</li>
+					<li class="list-group-item">Morbi leo risus</li>
+					<li class="list-group-item">Porta ac consectetur ac</li>
+					<li class="list-group-item">Vestibulum at eros</li>
+				</ul>
+
+			</div>
+		</div>
 	</div>
 </div>
-@stop
-
+@endsection

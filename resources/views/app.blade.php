@@ -15,5 +15,6 @@
 	
 	<script src="{{ elixir("js/all.js") }}"></script>
 	
+	<script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyAP9skepfDL3L5pB4oF0Y1eey1BdF2trcI&amp;callback=initMap"></script>
 </body>
 </html>

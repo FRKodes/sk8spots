@@ -1,6 +1,7 @@
 var elixir = require('laravel-elixir');
 require('laravel-elixir-stylus');
 
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -21,7 +22,9 @@ elixir(function(mix) {
     ],'public/css/all.css', 'public/css')
     .scripts([
     	'jquery.js',
-    	'bootstrap.js'
+    	'bootstrap.js',
+        'custom.js'
     ],'public/js/all.js', 'public/js')
-    .version(['css/all.css', 'js/all.js']);
+    .version(['css/all.css', 'js/all.js'])
+    .browserSync({proxy: 'sk8spots.dev'});
 });

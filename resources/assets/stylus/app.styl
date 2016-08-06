@@ -4,6 +4,7 @@ verde1 = #07CED2
 verde2 = #419FA2
 verde3 = #165B5C
 turquesa = #07CED2
+gris1 = #F2F2F2
 
 a
 	transition color .5s ease
@@ -15,11 +16,13 @@ a
 h3
 	font-weight 600
 body
+	background-color gris1
 	font-family 'Lato', sans-serif
-	padding-top 50px
 	font-weight 600
+	padding-top 50px
 .navbar-default	
 	background-color verdebase
+	border-color verde2
 	.navbar-brand
 	.navbar-nav>li>a
 		color white
@@ -35,11 +38,42 @@ body
 			background-color verde2
 			color verde3
 			transition background-color .5s ease
+	.navbar-nav>.open>a,
+	.navbar-nav>.open>a:focus,
+	.navbar-nav>.open>a:hover
+		background-color verde3
+		color verde1
+		transition background-color .5s ease
+.dropdown-menu
+	background-color verde3
+	border 1px solid rgba(verde3, .9)
+	padding 0
+	li
+		padding 0
+		width 100%
+		a
+			color white
+			display block
+			padding-bottom 10px
+			padding-top 10px
+			text-align right
+			transition color .5s ease
+			&:hover
+				background-color verde3
+				color verde1
+				transition color .5s ease
+.panel-default
+	.panel-heading
+		background-color verde3
+		color white
 .map
-	background transparent url(../../images/map.jpg) no-repeat center top
 	background-size cover
-	height 500px
+	height 400px
 	text-align center
+#map
+	height 100%
+	display block
+	background-color gray
 .spots-list
 	padding-top 30px
 footer
@@ -86,3 +120,8 @@ footer
 			height 80px
 			p
 				align-self center
+	.map
+		height 550px
+@media screen and (min-width: 992px)
+	.map
+		height 700px

@@ -65,12 +65,14 @@ h3 {
   font-weight: 600;
 }
 body {
+  background-color: #f2f2f2;
   font-family: 'Lato', sans-serif;
-  padding-top: 50px;
   font-weight: 600;
+  padding-top: 50px;
 }
 .navbar-default {
   background-color: #67cda7;
+  border-color: #419fa2;
 }
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav>li>a {
@@ -92,11 +94,48 @@ body {
   color: #165b5c;
   transition: background-color 0.5s ease;
 }
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+  background-color: #165b5c;
+  color: #07ced2;
+  transition: background-color 0.5s ease;
+}
+.dropdown-menu {
+  background-color: #165b5c;
+  border: 1px solid rgba(22,91,92,0.9);
+  padding: 0;
+}
+.dropdown-menu li {
+  padding: 0;
+  width: 100%;
+}
+.dropdown-menu li a {
+  color: #fff;
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: right;
+  transition: color 0.5s ease;
+}
+.dropdown-menu li a:hover {
+  background-color: #165b5c;
+  color: #07ced2;
+  transition: color 0.5s ease;
+}
+.panel-default .panel-heading {
+  background-color: #165b5c;
+  color: #fff;
+}
 .map {
-  background: transparent url("../../images/map.jpg") no-repeat center top;
   background-size: cover;
-  height: 500px;
+  height: 400px;
   text-align: center;
+}
+#map {
+  height: 100%;
+  display: block;
+  background-color: #808080;
 }
 .spots-list {
   padding-top: 30px;
@@ -159,6 +198,14 @@ footer .social li a:hover {
   footer .contact-column p {
     -ms-flex-item-align: center;
     align-self: center;
+  }
+  .map {
+    height: 550px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .map {
+    height: 700px;
   }
 }
 
