@@ -11,6 +11,8 @@
 
 	<section>@yield('content')</section>
 
+	<section>@include('partials.adsense')</section>
+
 	<footer>@include('partials.footer')</footer>
 	
 	<script src="{{ elixir("js/all.js") }}"></script>
