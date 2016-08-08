@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-			<h1 class="text-center">Iniciar sesión</h1>
+			<h1 class="text-center">Inicia sesión en tu cuenta</h1>
 
 			<p class="text-center">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius voluptates accusantium quos ad veritatis, nostrum facere eos, repellendus et animi ducimus obcaecati provident eveniet aspernatur dolorem molestiae optio officiis ab.

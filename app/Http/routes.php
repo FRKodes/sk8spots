@@ -12,6 +12,7 @@
 */
 
 Route::get('/', function () {
+	Auth::loginUsingId(1);
     return view('pages.index');
 });
 

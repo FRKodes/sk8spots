@@ -20,13 +20,6 @@
 				</div>
 
 				<ul class="list-group">
-					<li class="list-group-item">{{ getenv('DB_CONNECTION') }}</li>
-					<li class="list-group-item">{{ getenv('DB_HOST')}}</li>
-					<li class="list-group-item">{{ getenv('DB_PORT')}}</li>
-					<li class="list-group-item">{{ getenv('DB_DATABASE')}}</li>
-					<li class="list-group-item">{{ getenv('DB_USERNAME')}}</li>
-					<li class="list-group-item">{{ getenv('DB_PASSWORD')}}</li>
-
 					<li class="list-group-item">Cras justo odio</li>
 					<li class="list-group-item">Dapibus ac facilisis in</li>
 					<li class="list-group-item">Morbi leo risus</li>

@@ -36,6 +36,9 @@ function initMap() {
 	locations.push({title: "Bowl El Frijol", address: "Avenida Valdepeñas 816-A", neighborhood: "Lomas de Zapopan", city: "Zapopan", state: "Jalisco", country: "México", coords: "20.741649, -103.399106", category: "Bowl"});
 	locations.push({title: "Skatepark Tabachines", address: "Anillo Periférico Norte 1996", neighborhood: "Tabachines", city: "Zapopan", state: "Jalisco", country: "México", coords: "20.734278, -103.358667", category: "Skatepark"});	
 	locations.push({title: "Skatepark Santa Cecilia (Sta. Chila)", address: "De La Selva Norte y Sur 2150", neighborhood: "Santa Cecilia", city: "Guadalajara", state: "Jalisco", country: "México", coords: "20.704390, -103.288825", category: "Skatepark"});
+	locations.push({title: "Jardín San José de Analco", address: "Analco S/N", neighborhood: "Analco", city: "Guadalajara", state: "Jalisco", country: "México", coords: "20.667584, -103.341244", category: "Street Spot"});
+	locations.push({title: "Spot del Globo", address: "Avenida 5 de Febrero 135B", neighborhood: "Las Conchas", city: "Guadalajara", state: "Jalisco", country: "México", coords: "20.661342, -103.343030", category: "Street Spot"});
+	locations.push({title: "10 Escalones Pila Seca", address: "Calle Donato Guerra 5", neighborhood: "Prados del Nilo", city: "San Pedro Tlaquepaque", state: "Jalisco", country: "México", coords: "20.641733, -103.316936", category: "Street Spot"});
 
 	console.log(locations);
 

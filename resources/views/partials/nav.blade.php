@@ -32,6 +32,9 @@
 				            {{ Auth::user()->name }} <span class="caret"></span>
 				        </a>
 				        <ul class="dropdown-menu" role="menu">
+				        	@can('edit_info')
+								<li><a href="{{ url('/admin/users') }}">Users</a></li>
+				        	@endcan
 				            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
 				        </ul>
 				    </li>

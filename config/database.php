@@ -54,11 +54,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => getenv('DB_HOST'),
-            'port' => getenv('DB_PORT'),
-            'database' => getenv('DB_DATABASE'),
-            'username' => getenv('DB_USERNAME'),
-            'password' => getenv('DB_PASSWORD'),
+            'host' => getenv('DB_HOST') ? : 'localhost',
+            'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
+            'port' => getenv('DB_PORT') ? : '3306',
+            'database' => getenv('DB_DATABASE') ? : 'sk8spots',
+            'username' => getenv('DB_USERNAME') ? : 'root',
+            'password' => getenv('DB_PASSWORD') ? : 'root',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
