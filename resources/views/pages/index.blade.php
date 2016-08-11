@@ -6,6 +6,15 @@
 	</div>
 </div>
 
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3 text-center">
+			<h1 class="title">¿Conoces un Spot?</h1>
+			<a href="{{ url('spot/create') }}" class="btn btn-primary" title="¡El conocimiento es poder!">¡Compártelo con la comunidad!</a>
+		</div>
+	</div>
+</div>
+
 <div class="container spots-list">
 	<div class="row">
 		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
