@@ -11,6 +11,25 @@ a:hover {
 h3 {
   font-weight: 600;
 }
+.green-btn {
+  background-color: #419fa2;
+  border-color: #419fa2;
+  transition: background-color 0.5s ease;
+}
+.green-btn:hover {
+  background-color: #07ced2;
+  border-color: #07ced2;
+  color: #000;
+  transition: all 0.5s ease;
+}
+.green-btn:focus {
+  background-color: #165b5c;
+  border-color: #165b5c;
+}
+.green-btn:active {
+  background-color: #165b5c;
+  border-color: #165b5c;
+}
 body {
   background-color: #f2f2f2;
   font-family: 'Lato', sans-serif;
@@ -86,6 +105,16 @@ body {
 }
 .spots-list {
   padding-top: 30px;
+}
+.btn.btn-primary {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.adsense {
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 footer {
   color: #fff;

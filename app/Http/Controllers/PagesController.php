@@ -10,7 +10,9 @@ class PagesController extends Controller
 {
 	public function index()
 	{
-		\Auth::loginUsingId(1);
+        // \Auth::loginUsingId(1);
+
+        
     	return view('pages.index');
 	}
 

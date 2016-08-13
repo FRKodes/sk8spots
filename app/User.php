@@ -6,48 +6,53 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array
+	 */
+	protected $fillable = [
+		'name', 'email', 'password',
+	];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+	/**
+	 * The attributes that should be hidden for arrays.
+	 *
+	 * @var array
+	 */
+	protected $hidden = [
+		'password', 'remember_token',
+	];
 
-    public function roles()
-    {
-        return $this->belongsToMany(Role::class);
-    }
+	public function roles()
+	{
+		return $this->belongsToMany(Role::class);
+	}
 
-    public function assignRole($role)
-    {
-        return $this->roles()->save(
-            Role::whereName($role)->firstOrFail()
-        );
-    }
+	public function spots()
+	{
+		return $this->hasMany(Spot::class);
+	}
 
-    public function hasRole($role)
-    {
-        if (is_string($role)) {
-            return $this->roles->contains('name', $role);
-        }
+	public function assignRole($role)
+	{
+		return $this->roles()->save(
+			Role::whereName($role)->firstOrFail()
+		);
+	}
 
-        foreach ($role as $r) {
-            if ($this->hasRole($r->name)) {
-                return true;
-            }
-        }
+	public function hasRole($role)
+	{
+		if (is_string($role)) {
+			return $this->roles->contains('name', $role);
+		}
 
-        return false;
-    }
+		foreach ($role as $r) {
+			if ($this->hasRole($r->name)) {
+				return true;
+			}
+		}
+
+		return false;
+	}
 }

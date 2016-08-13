@@ -22,7 +22,6 @@ class CreateSpotsTable extends Migration
             $table->integer('country');
             $table->string('coords');
             $table->integer('category_id');
-            $table->integer('uploaded_by');
             $table->string('tags');
             $table->timestamps();
         });
