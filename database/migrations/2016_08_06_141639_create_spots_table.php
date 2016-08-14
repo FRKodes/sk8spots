@@ -24,6 +24,7 @@ class CreateSpotsTable extends Migration
             $table->integer('category_id');
             $table->integer('user_id');
             $table->string('tags');
+            $table->enum('status', array(0, 1));
             $table->timestamps();
         });
     }
