@@ -48,13 +48,12 @@ class SpotController extends Controller
 				'state' => $request->get('state'),
 				'country' => $request->get('country'),
 				'coords' => $request->get('coords'),
-				'category_id' => $request->get('category')
+				'category_id' => $request->get('category'),
+				'user_id' => ($user = Auth::user()) ? $user->id : 0
 			]);
 			
-			$spot->save();
-
-			if($user = Auth::user())
-				$spot->owner()->associate($user);
+			if ($spot->save())
+				$request->session()->flash('alert-success', '¡Gracias por colaborar! El spot fué guardado exitosamente, nuestro equipo lo revisará y en breve estará en la lista de resultados.');
 
 			return redirect()->back();
 		}

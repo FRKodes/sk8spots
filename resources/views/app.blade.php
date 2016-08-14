@@ -9,6 +9,8 @@
 
 	<header>@include('partials.nav')</header>
 
+	@include('partials.flash-message')
+	
 	<section>@yield('content')</section>
 
 	<section>@include('partials.adsense')</section>

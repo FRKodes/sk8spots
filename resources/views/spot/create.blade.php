@@ -8,8 +8,9 @@
 			<p><h4 class="text-center">¡Compártelo con la comunidad!</h4></p>
 			<hr>
 			<p>
-				Imagina que eres nuevo en una ciudad y no conoces lugares donde patinar, sería genial encontrar un lugar ¿no?. <br> Agrega un spot y ayuda a que alguien más no tenga ese problema, apoya a la comunidad skate mundial.
-				</p>
+				Imagina que eres nuevo en una ciudad y no conoces lugares donde patinar, sería genial encontrar un lugar ¿no?. <br>
+				Agrega un spot y ayuda a que alguien más no tenga ese problema, apoya a la comunidad skate mundial.
+			</p>
 		</div>
 	</div>
 </div>
