@@ -40,8 +40,6 @@ function initMap() {
 	locations.push({title: "Spot del Globo", address: "Avenida 5 de Febrero 135B", neighborhood: "Las Conchas", city: "Guadalajara", state: "Jalisco", country: "México", coords: "20.661342, -103.343030", category: "Street Spot"});
 	locations.push({title: "10 Escalones Pila Seca", address: "Calle Donato Guerra 5", neighborhood: "Prados del Nilo", city: "San Pedro Tlaquepaque", state: "Jalisco", country: "México", coords: "20.641733, -103.316936", category: "Street Spot"});
 
-	console.log(locations);
-
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 12,
 		scrollwheel: false,
