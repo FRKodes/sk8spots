@@ -1,4 +1,5 @@
 function initMap() {
+
 	var customMapType = new google.maps.StyledMapType([
 	{
 		stylers: [
@@ -72,4 +73,28 @@ function initMap() {
 
 	map.mapTypes.set(customMapTypeId, customMapType);
 	map.setMapTypeId(customMapTypeId);
+
+}
+
+function initMapDrag(){
+
+		var myLatlngDrag = new google.maps.LatLng(20.674894,-103.354793);
+		var mapOptions = {
+		  zoom: 12,
+		  scrollwheel: false,
+		  center: myLatlngDrag,
+		}
+		
+		var map = new google.maps.Map(document.getElementById("map-drag"), mapOptions);
+		var markerDrag = new google.maps.Marker({
+		    position: myLatlngDrag,
+		    map: map,
+		    draggable:true,
+		    title:"Drag me!"
+		});
+
+		google.maps.event.addListener(markerDrag, 'dragend', function (event) {
+		    document.getElementById("coords").value = this.getPosition().lat().toFixed(6) + ',' + this.getPosition().lng().toFixed(6);
+		});
+
 }

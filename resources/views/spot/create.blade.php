@@ -47,9 +47,15 @@
 			    <small class="text-danger">{{ $errors->first('country') }}</small>
 			</div>
 			<div class="form-group{{ $errors->has('coords') ? ' has-error' : '' }}">
-			    {!! Form::text('coords', null, ['class' => 'form-control', 'placeholder'=>'Agrega las coordenadas', 'required' => 'required']) !!}
+			    {!! Form::text('coords', null, ['class' => 'form-control', 'id'=>'coords', 'placeholder'=>'Agrega las coordenadas', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('coords') }}</small>
 			</div>
+			
+			<div class="map-drag-container">
+				<p class="green italic">Usa el mapa que está debajo, arrastra y suelta el pin en el sobre el spot para obtener las coordenadas.</p>
+				<div class="map-drag" id="map-drag"></div>
+			</div>
+
 			<div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
 			    {!! Form::select('category', [1=>'Skatepark', 2=>'Street Spot', 3=>'Bowl'], null, ['id' => 'category', 'class' => 'form-control', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('category') }}</small>

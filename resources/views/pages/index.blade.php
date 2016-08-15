@@ -10,7 +10,7 @@
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-3 text-center">
 			<h1 class="title">¿Conoces un Spot?</h1>
-			<a href="{{ url('spot/create') }}" class="btn btn-primary green-btn" title="¡El conocimiento es poder!">¡Compártelo con la comunidad!</a>
+			<a href="{{ url('spot/create') }}" class="btn btn-primary green-btn share" title="¡El conocimiento es poder!">¡Compártelo con la comunidad!</a>
 		</div>
 	</div>
 </div>
