@@ -107,6 +107,7 @@ body {
 }
 .map {
   background-size: cover;
+  border-bottom: 1px dashed #165b5c;
   height: 350px;
   text-align: center;
 }
