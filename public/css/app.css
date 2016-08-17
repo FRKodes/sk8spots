@@ -107,7 +107,7 @@ body {
 }
 .map {
   background-size: cover;
-  height: 400px;
+  height: 350px;
   text-align: center;
 }
 #map {
@@ -139,6 +139,7 @@ body {
 .adsense {
   margin-top: 60px;
   margin-bottom: 40px;
+  overflow: hidden;
 }
 footer {
   color: #fff;
@@ -200,12 +201,12 @@ footer .social li a:hover {
     align-self: center;
   }
   .map {
-    height: 550px;
+    height: 450px;
   }
 }
 @media screen and (min-width: 992px) {
   .map {
-    height: 700px;
+    height: 550px;
   }
 }
 
