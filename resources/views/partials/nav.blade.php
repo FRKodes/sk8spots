@@ -11,10 +11,20 @@
 			<a class="navbar-brand" href="{{ url('/') }}">Sk8SpotsMx</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="{{ url('/') }}">Inicio</a></li>
+				<li><a href="{{ url('/acerca-de') }}">Acerca de</a></li>
+				<li><a href="{{ url('/spot/create') }}">Agrega un spot</a></li>
+				<li><a href="{{ url('/contacto') }}">Contacto</a></li>
+			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="{{ url('/') }}">Home</a></li>
-				<li><a href="{{ url('/acerca-de') }}">About</a></li>
-				<li><a href="{{ url('/contacto') }}">Contact</a></li>
+				
+				@if (!Auth::guest())
+					<li><a href="{{ url('/admin')}}">Dashboard</a></li>
+					<li><a href="{{ url('/usuarios')}}">Usuarios</a></li>
+					<li><a href="{{ url('/spots')}}">Spots</a></li>
+				@endif
+
 				<!-- Authentication Links -->
 				@if (Auth::guest())
 					<li class="dropdown">
