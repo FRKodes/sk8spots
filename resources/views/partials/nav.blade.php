@@ -19,11 +19,11 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				
-				@if (!Auth::guest())
+				@can ('admin')
 					<li><a href="{{ url('/admin')}}">Dashboard</a></li>
 					<li><a href="{{ url('/admin/users')}}">Usuarios</a></li>
 					<li><a href="{{ url('admin/spots')}}">Spots</a></li>
-				@endif
+				@endcan
 
 				<!-- Authentication Links -->
 				@if (Auth::guest())
