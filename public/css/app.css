@@ -1,4 +1,7 @@
 /*COLORS PALLETE*/
+h1 {
+  color: #419fa2;
+}
 a {
   transition: color 0.5s ease;
   color: #165b5c;

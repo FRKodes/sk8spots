@@ -4,6 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">
+			<hr>
 			<h1 class="title">¿Conoces un Spot?</h1>
 			<p><h4 class="text-center">¡Compártelo con la comunidad!</h4></p>
 			<hr>
