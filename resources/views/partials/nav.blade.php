@@ -21,8 +21,8 @@
 				
 				@if (!Auth::guest())
 					<li><a href="{{ url('/admin')}}">Dashboard</a></li>
-					<li><a href="{{ url('/usuarios')}}">Usuarios</a></li>
-					<li><a href="{{ url('/spots')}}">Spots</a></li>
+					<li><a href="{{ url('/admin/users')}}">Usuarios</a></li>
+					<li><a href="{{ url('admin/spots')}}">Spots</a></li>
 				@endif
 
 				<!-- Authentication Links -->
