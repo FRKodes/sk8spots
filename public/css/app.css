@@ -145,6 +145,21 @@ body {
   margin-bottom: 40px;
   overflow: hidden;
 }
+.pagination>li>a {
+  color: #419fa2;
+}
+.pagination>li>a:hover {
+  color: #165b5c;
+}
+.pagination>.active>span {
+  background-color: #419fa2;
+  border-color: #419fa2;
+  transition: background-color 0.5s ease;
+}
+.pagination>.active>span:hover {
+  background-color: #165b5c;
+  transition: background-color 0.5s ease;
+}
 footer {
   color: #fff;
   background: #67cda7;

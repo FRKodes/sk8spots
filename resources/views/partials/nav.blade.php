@@ -19,13 +19,12 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				
-				@can ('admin')
+				@can('edit_cms')
 					<li><a href="{{ url('/admin')}}">Dashboard</a></li>
 					<li><a href="{{ url('/admin/users')}}">Usuarios</a></li>
 					<li><a href="{{ url('admin/spots')}}">Spots</a></li>
 				@endcan
 
-				<!-- Authentication Links -->
 				@if (Auth::guest())
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

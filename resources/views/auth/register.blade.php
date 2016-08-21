@@ -84,6 +84,9 @@
                                 </button>
                             </div>
                         </div>
+
+                        <div class="form-group"><div class="col-md-6 col-md-offset-4">¿Ya tienes una cuenta? Haz <a href="{{ url('login') }}">inicia sesión</a></div></div>
+                        
                     </form>
                 </div>
             </div>

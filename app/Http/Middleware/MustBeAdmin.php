@@ -16,7 +16,7 @@ class MustBeAdmin
     public function handle($request, Closure $next)
     {
         $user = $request->user();
-        if ($user && $user->hasRole('Admin')) {
+        if ($user && $user->hasRole('admin')) {
             return $next($request);
         }
 

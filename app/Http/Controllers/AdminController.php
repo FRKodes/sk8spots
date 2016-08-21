@@ -23,7 +23,7 @@ class AdminController extends Controller
 
     public function users()
     {
-    	$users = User::orderBy('id', 'desc')->paginate(20);
+    	$users = User::orderBy('id', 'desc')->paginate(15);
     	return View('admin.users', compact('users'));
     }
 

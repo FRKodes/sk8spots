@@ -68,6 +68,9 @@
 								<a class="btn btn-link green" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
 							</div>
 						</div>
+
+						<div class="form-group"><div class="col-md-6 col-md-offset-4">¿No tienes una cuenta? <a href="{{ url('register') }}">Regístrate</a></div></div>
+
 					</form>
 				</div>
 			</div>

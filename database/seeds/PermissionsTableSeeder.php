@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class RolesTableSeeder extends Seeder
+class PermissionsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,14 +11,9 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        
-        App\Role::create([
-        	"name"=>"admin"
+        App\Permission::create([
+        	"name"=>"edit_cms",
+        	"label"=>"Can edit all in the CMS"
         ]);
-
-		App\Role::create([
-			"name"=>"user"
-		]);
-
     }
 }
