@@ -14,6 +14,7 @@ class Spot extends Model
 		'state',
 		'country',
 		'coords',
+		'user_id',
 		'category_id'
 	];
 

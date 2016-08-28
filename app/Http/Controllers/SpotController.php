@@ -54,7 +54,7 @@ class SpotController extends Controller
 				'country' => 1, /*it's hardcoded for México*/
 				'coords' => $request->get('coords'),
 				'category_id' => $request->get('category'),
-				'user_id' => ($user = Auth::user()) ? $user->id : 0
+				'user_id' => Auth::user()->id ? : 0
 			]);
 			
 			if ($spot->save())
