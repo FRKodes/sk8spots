@@ -35,14 +35,28 @@
 			    {!! Form::text('neighborhood', null, ['class' => 'form-control', 'placeholder'=>'Colonia Ej. Arcos Vallarta',  'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('neighborhood') }}</small>
 			</div>
+			
 			<div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
-			    {!! Form::text('city', null, ['class' => 'form-control', 'placeholder'=>'Ciudad', 'required' => 'required']) !!}
+				<select name="city" id="city" class="form-control" required="required">
+					<option value="">Selecciona una ciudad...</option>
+					@foreach($cities as $city)
+						<option value="{{ $city->id }}" data-state="{{ $city->state->name }}" data-state-id="{{ $city->state->id }}" >{{ $city->name }} ({{ $city->state->short_name }})</option>
+					@endforeach
+					<option value="otra" data-state-id="other">Otra ciudad...</option>
+				</select>
 			    <small class="text-danger">{{ $errors->first('city') }}</small>
 			</div>
+
+			<div class="form-group{{ $errors->has('other_city') ? ' has-error' : '' }}">
+			    {!! Form::text('other_city', null, ['class' => 'form-control hidden', 'id'=>'other_city', 'placeholder'=>'Escribe el nombre de la ciudad']) !!}
+			    <small class="text-danger">{{ $errors->first('other_city') }}</small>
+			</div>
+			
 			<div class="form-group{{ $errors->has('state') ? ' has-error' : '' }}">
-			    {!! Form::text('state', null, ['class' => 'form-control', 'placeholder'=>'Estado', 'required' => 'required']) !!}
+			    {!! Form::select('state', $states, null, ['id' => 'state', 'class' => 'form-control hidden', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('state') }}</small>
 			</div>
+			
 			<div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
 			    {!! Form::text('country', null, ['class' => 'form-control', 'placeholder'=>'País', 'value'=>'México', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('country') }}</small>

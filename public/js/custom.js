@@ -82,6 +82,7 @@ function initMapDrag(){
 		var mapOptions = {
 		  zoom: 12,
 		  scrollwheel: false,
+
 		  center: myLatlngDrag,
 		}
 		
@@ -98,3 +99,16 @@ function initMapDrag(){
 		});
 
 }
+
+(function() {
+	$('#city').change(function(){
+		var option = $('option:selected', this).attr('data-state-id');
+		$('#state').val(option);
+
+		if (option == 'other') {
+			$('#other_city').removeClass('hidden');
+		}else{
+			$('#other_city').addClass('hidden');
+		}
+	});
+})(this);

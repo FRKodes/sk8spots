@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Spot;
+use App\City;
+use App\State;
+use App\Country;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -26,7 +29,9 @@ class SpotController extends Controller
 	 */
 	public function create()
 	{
-		return View('spot.create');
+		$cities = City::with('state')->orderBy('state_id')->get();
+		$states = State::orderBy('name')->pluck('name', 'id');
+		return View('spot.create', compact('cities', 'states', 'countries'));
 	}
 
 	/**
@@ -46,7 +51,7 @@ class SpotController extends Controller
 				'neighborhood' => $request->get('neighborhood'),
 				'city' => $request->get('city'),
 				'state' => $request->get('state'),
-				'country' => $request->get('country'),
+				'country' => 1, /*it's hardcoded for México*/
 				'coords' => $request->get('coords'),
 				'category_id' => $request->get('category'),
 				'user_id' => ($user = Auth::user()) ? $user->id : 0
