@@ -22,10 +22,9 @@
 
 	@if(\Request::path() == '/')
 		<script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyAP9skepfDL3L5pB4oF0Y1eey1BdF2trcI&amp;callback=initMap"></script>
-	@endif
-	
-	@if(\Request::path() == 'spot/create' || \Request::path() == 'admin/spot/*')
+	@else
 		<script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyAP9skepfDL3L5pB4oF0Y1eey1BdF2trcI&amp;callback=initMapDrag"></script>
 	@endif
+	
 </body>
 </html>

@@ -6,10 +6,10 @@
 		<h1>Spot: {{ $spot->title }}</h1>
 		<hr>
 		<div class="row">
-			<div class="detail-map col-sm-6">
+			<div class="detail-map col-sm-6 col-lg-5">
 				<img src="https://maps.googleapis.com/maps/api/staticmap?center={{ $spot->coords }}&zoom=15&size=600x600&maptype=roadmap&markers={{ $spot->coords }}&key=AIzaSyAP9skepfDL3L5pB4oF0Y1eey1BdF2trcI" alt="Mapa del spot - {{ $spot->title }}">
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-6 col-lg-7">
 				<p><b class="verde3">Descripción: </b>{{ $spot->descripcion }}</p>
 				<p><b class="verde3">Dirección: </b>{{ $spot->address }}</p>
 				<p><b class="verde3">Colinia: </b>{{ $spot->neighborhood }}</p>

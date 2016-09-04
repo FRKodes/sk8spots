@@ -63,7 +63,7 @@
 			    <small class="text-danger">{{ $errors->first('coords') }}</small>
 			</div>
 			
-			<div class="map-drag-container hidden">
+			<div class="map-drag-container">
 				<p class="green italic">Usa el mapa que está debajo, arrastra y suelta el pin en el sobre el spot para obtener las coordenadas.</p>
 				<div class="map-drag" id="map-drag"></div>
 			</div>
