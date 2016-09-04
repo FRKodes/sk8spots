@@ -12,6 +12,8 @@ Route::get('admin/users','AdminController@users');
 Route::get('admin/user/{id}','AdminController@user');
 Route::get('admin/spots','AdminController@spots');
 Route::get('admin/spot/{id}','AdminController@spot');
+Route::get('admin/spot/{id}/edit','AdminController@editspot');
+Route::patch('admin/spot/{id}','AdminController@updatespot');
 
 Route::auth();
 

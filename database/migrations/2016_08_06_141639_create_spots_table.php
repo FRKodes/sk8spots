@@ -15,6 +15,7 @@ class CreateSpotsTable extends Migration
         Schema::create('spots', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->text('descripcion');
             $table->string('address');
             $table->string('neighborhood');
             $table->integer('city');

@@ -31,7 +31,7 @@ class SpotController extends Controller
 	{
 		$cities = City::with('state')->orderBy('state_id')->get();
 		$states = State::orderBy('name')->pluck('name', 'id');
-		return View('spot.create', compact('cities', 'states', 'countries'));
+		return View('spot.create', compact('cities', 'states'));
 	}
 
 	/**

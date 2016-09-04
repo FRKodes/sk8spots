@@ -1,4 +1,7 @@
 /*COLORS PALLETE*/
+.verde3 {
+  color: #165b5c;
+}
 h1 {
   color: #419fa2;
 }
@@ -195,6 +198,16 @@ body {
 }
 .line-heading {
   border-bottom: 1px solid rgba(65,159,162,0.8);
+}
+.spot-detail .detail-map {
+  height: 330px;
+  border: none;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.spot-detail .detail-map img {
+  width: 100%;
+  height: auto;
 }
 footer {
   color: #fff;

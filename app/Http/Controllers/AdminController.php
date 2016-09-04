@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\User;
+use App\City;
 use App\Spot;
+use App\State;
+use App\User;
+use App\Country;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -43,5 +46,36 @@ class AdminController extends Controller
     {	
     	$spot = Spot::findOrFail($id);
     	return View('admin.spot', compact('spot'));
+    }
+    public function editSpot($id)
+    {
+        $cities = City::with('state')->orderBy('state_id')->get();
+        $states = State::orderBy('name')->pluck('name', 'id');
+        $countries = Country::orderBy('name')->pluck('name', 'id');
+        $spot = Spot::findOrFail($id);
+        return View('admin.editspot', compact('spot', 'cities', 'states', 'countries'));
+    }
+
+    public function updatespot(Request $request, $id)
+    {
+        $input = $request->all();
+        $spot = Spot::findOrFail($id);
+        $spot->title = $request->get('title');
+        $spot->address = $request->get('address');
+        $spot->neighborhood = $request->get('neighborhood');
+        $spot->city = $request->get('city');
+        // $spot->other_city = $request->get('other_city');
+        $spot->state = $request->get('state');
+        $spot->country = $request->get('country');
+        $spot->coords = $request->get('coords');
+        $spot->category_id = $request->get('category_id');
+        $spot->status = $request->get('status');
+        
+        if ($spot->save()){
+            $request->session()->flash('alert-success', 'El spot fué actualizado exitosamente.');
+            return redirect('/admin/spot/'.$spot->id);
+        }
+
+        return back()->with('input');
     }
 }
