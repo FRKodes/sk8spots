@@ -14,7 +14,7 @@
 				@if($spots)
 					<ul class="list-group">
 						@foreach($spots as $spot)
-							<li class="list-group-item"><a href="{{ url('admin/spot')}}/{{ $spot->id }}" class="" title="go to user">{{ $spot->title }}</a></li>
+							<li class="list-group-item {{ ($spot->status) ? '' : 'inactive-spot' }}"><a href="{{ url('admin/spot')}}/{{ $spot->id }}" class="" title="go to spot detail">{{ $spot->title }}</a></li>
 						@endforeach
 					</ul>
 				@endif

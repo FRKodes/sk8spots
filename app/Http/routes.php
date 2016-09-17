@@ -5,6 +5,8 @@ Route::get('acerca-de', 'PagesController@acercade');
 Route::get('contacto', 'PagesController@contacto');
 Route::resource('spot', 'SpotController');
 
+Route::get('api/getspots', 'ApiController@getSpots');
+
 Route::get('perfil', 'ProfileController@index');
 
 Route::get('admin', 'AdminController@index');

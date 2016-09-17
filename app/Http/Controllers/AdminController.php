@@ -62,11 +62,12 @@ class AdminController extends Controller
         $spot = Spot::findOrFail($id);
         $spot->title = $request->get('title');
         $spot->address = $request->get('address');
+        $spot->description = $request->get('description');
         $spot->neighborhood = $request->get('neighborhood');
-        $spot->city = $request->get('city');
+        $spot->city_id = $request->get('city_id');
         // $spot->other_city = $request->get('other_city');
-        $spot->state = $request->get('state');
-        $spot->country = $request->get('country');
+        $spot->state_id = $request->get('state_id');
+        $spot->country_id = $request->get('country_id');
         $spot->coords = $request->get('coords');
         $spot->category_id = $request->get('category_id');
         $spot->status = $request->get('status');

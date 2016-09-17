@@ -16,6 +16,10 @@
 		<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 
 			{!! Form::open(['url'=>'admin/spot/'.$spot->id, 'id'=>'submitForm', 'method'=>'patch']) !!}
+			<div class="form-group{{ $errors->has('descripcion') ? ' has-error' : '' }}">
+			    {!! Form::textarea('description', $spot->description, ['class' => 'form-control', 'required' => 'required']) !!}
+			    <small class="text-danger">{{ $errors->first('descripcion') }}</small>
+			</div>
 			<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
 			    {!! Form::text('title', $spot->title, ['class' => 'form-control', 'placeholder'=>'Escribe el título del spot', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('title') }}</small>
@@ -29,11 +33,11 @@
 			    <small class="text-danger">{{ $errors->first('neighborhood') }}</small>
 			</div>
 
-			<div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
-				<select name="city" id="city" class="form-control" required="required">
+			<div class="form-group{{ $errors->has('city_id') ? ' has-error' : '' }}">
+				<select name="city_id" id="city_id" class="form-control" required="required">
 					<option value="">Selecciona una ciudad...</option>
 					@foreach($cities as $city)
-						<option value="{{ $city->id }}" @if($city->id == $spot->city) selected="selected" @endif data-state="{{ $city->state->name }}" data-state-id="{{ $city->state->id }}" >{{ $city->name }} ({{ $city->state->short_name }})</option>
+						<option value="{{ $city->id }}" @if($city->id == $spot->city_id) selected="selected" @endif data-state="{{ $city->state->name }}" data-state-id="{{ $city->state->id }}" >{{ $city->name }} ({{ $city->state->short_name }})</option>
 					@endforeach
 					<option value="otra" data-state-id="other">Otra ciudad...</option>
 				</select>
@@ -47,13 +51,13 @@
 
 			
 			<div class="form-group{{ $errors->has('state') ? ' has-error' : '' }}">
-			    {!! Form::select('state', $states, $spot->state, ['id' => 'state', 'class' => 'form-control', 'required' => 'required']) !!}
+			    {!! Form::select('state_id', $states, $spot->state_id, ['id' => 'state_id', 'class' => 'form-control', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('state') }}</small>
 			</div>
 			
 			
 			<div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
-			    {!! Form::select('country', $countries, $spot->country, ['id' => 'country', 'class' => 'form-control', 'required' => 'required']) !!}
+			    {!! Form::select('country_id', $countries, $spot->country, ['id' => 'country_id', 'class' => 'form-control', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('country') }}</small>
 			</div>
 
@@ -68,9 +72,9 @@
 				<div class="map-drag" id="map-drag"></div>
 			</div>
 
-			<div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
-			    {!! Form::select('category', [1=>'Skatepark', 2=>'Street Spot', 3=>'Bowl'], null, ['id' => 'category', 'class' => 'form-control', 'required' => 'required']) !!}
-			    <small class="text-danger">{{ $errors->first('category') }}</small>
+			<div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
+			    {!! Form::select('category_id', [1=>'Skatepark', 2=>'Street Spot', 3=>'Bowl'], null, ['id' => 'category_id', 'class' => 'form-control', 'required' => 'required']) !!}
+			    <small class="text-danger">{{ $errors->first('category_id') }}</small>
 			</div>
 
 			<div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
@@ -78,7 +82,7 @@
 			    <small class="text-danger">{{ $errors->first('status') }}</small>
 			</div>
 			<a href="{{ url('/admin/spot/'.$spot->id) }}" class="btn btn-primary pull-left">< Regresar al spot</a>
-			{!! Form::submit('Enviar', ['class' => 'btn btn-primary green-btn pull-right']) !!}
+			{!! Form::submit('Actualizar', ['class' => 'btn btn-primary green-btn pull-right']) !!}
 			{!! Form::close() !!}
 		</div>
 	</div>

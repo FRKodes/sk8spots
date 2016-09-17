@@ -16,4 +16,9 @@ class State extends Model
     {
     	return $this->hasMany(City::class);
     }
+
+    public function spots()
+    {
+    	return $this->hasMany(Spot::class);
+    }
 }

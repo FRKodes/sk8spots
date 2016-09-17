@@ -75,7 +75,8 @@ class SpotController extends Controller
 	 */
 	public function show($id)
 	{
-		//
+		$spot = Spot::findOrFail($id);
+		return View('spot.show', compact('spot'));
 	}
 
 	/**

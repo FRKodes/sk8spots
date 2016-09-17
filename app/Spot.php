@@ -22,4 +22,24 @@ class Spot extends Model
 	{
 		return $this->belongsTo(User::class);
 	}
+
+	public function city()
+	{
+		return $this->belongsTo(City::class);
+	}
+	
+	public function category()
+	{
+		return $this->belongsTo(SpotCategory::class);
+	}
+	
+	public function state()
+	{
+		return $this->belongsTo(State::class);
+	}
+	
+	public function country()
+	{
+		return $this->belongsTo(Country::class);
+	}
 }

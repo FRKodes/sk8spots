@@ -15,17 +15,17 @@ class CreateSpotsTable extends Migration
         Schema::create('spots', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->text('descripcion');
+            $table->text('description');
             $table->string('address');
             $table->string('neighborhood');
-            $table->integer('city');
-            $table->integer('state');
-            $table->integer('country');
+            $table->integer('city_id');
+            $table->integer('state_id');
+            $table->integer('country_id');
             $table->string('coords');
             $table->integer('category_id');
             $table->integer('user_id');
             $table->string('tags');
-            $table->enum('status', array(0, 1));
+            $table->enum('status', array(0, 1))->default(0);
             $table->timestamps();
         });
     }
