@@ -1,6 +1,21 @@
 /*COLORS PALLETE*/
+.verde2 {
+  color: #419fa2;
+}
 .verde3 {
   color: #165b5c;
+}
+.back-verde2 {
+  background-color: #419fa2;
+}
+.back-verde3 {
+  background-color: #165b5c;
+}
+.lower {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
 }
 h1 {
   color: #419fa2;
@@ -203,7 +218,7 @@ body {
   color: rgba(22,91,92,0.5);
 }
 .spot-detail .detail-map {
-  height: 330px;
+  height: auto;
   border: none;
   margin-bottom: 30px;
   overflow: hidden;
@@ -211,6 +226,14 @@ body {
 .spot-detail .detail-map img {
   width: 100%;
   height: auto;
+}
+.spot-detail .spot-images .image-item {
+  margin-bottom: 30px;
+}
+.spot-detail .spot-images .image-item img {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
 }
 footer {
   color: #fff;

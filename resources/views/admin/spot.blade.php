@@ -18,7 +18,11 @@
 				<p><b class="verde3">País: </b>{{ $spot->country->name }}</p>
 				<p><b class="verde3">Categoría: </b>{{ $spot->category->name }}</p>
 				<p><b class="verde3">Subido por:</b> {{ $spot->user_id ? : 'N/A'}}</p>
-				<p><b class="verde3">Tags: </b>{{ $spot->tags }}</p>
+				<p><b class="verde3">Tags: </b>
+					@foreach(explode(',', $spot->tags) as $tag)
+						<a href="/tag/{{ strtolower(trim($tag)) }}"><span class="badge back-verde2 capitalize">{{ trim($tag) }}</span></a>
+					@endforeach
+				</p>
 				<p><b class="verde3">Status: </b>{{ $spot->status ? 'Activo' : 'Inactivo' }}</p>
 			</div>
 			<div class="col-sm-12 text-right">

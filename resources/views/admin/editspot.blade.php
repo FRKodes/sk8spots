@@ -16,10 +16,6 @@
 		<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 
 			{!! Form::open(['url'=>'admin/spot/'.$spot->id, 'id'=>'submitForm', 'method'=>'patch']) !!}
-			<div class="form-group{{ $errors->has('descripcion') ? ' has-error' : '' }}">
-			    {!! Form::textarea('description', $spot->description, ['class' => 'form-control', 'required' => 'required']) !!}
-			    <small class="text-danger">{{ $errors->first('descripcion') }}</small>
-			</div>
 			<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
 			    {!! Form::text('title', $spot->title, ['class' => 'form-control', 'placeholder'=>'Escribe el título del spot', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('title') }}</small>
@@ -61,6 +57,15 @@
 			    <small class="text-danger">{{ $errors->first('country') }}</small>
 			</div>
 
+			<div class="form-group{{ $errors->has('descripcion') ? ' has-error' : '' }}">
+			    {!! Form::textarea('description', $spot->description, ['class' => 'form-control', 'required' => 'required']) !!}
+			    <small class="text-danger">{{ $errors->first('descripcion') }}</small>
+			</div>
+
+			<div class="form-group{{ $errors->has('tags') ? ' has-error' : '' }}">
+			    {!! Form::text('tags', $spot->tags, ['class' => 'form-control', 'required' => 'required', 'placeholder'=>'Tags', 'data-role'=>'tagsinput']) !!}
+			    <small class="text-danger">{{ $errors->first('tags') }}</small>
+			</div>
 
 			<div class="form-group{{ $errors->has('coords') ? ' has-error' : '' }}">
 			    {!! Form::text('coords', $spot->coords, ['class' => 'form-control', 'id'=>'coords', 'placeholder'=>'Agrega las coordenadas', 'required' => 'required']) !!}
