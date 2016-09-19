@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Spot;
 use App\City;
 use App\State;
+use App\SpotCategory;
 use App\Country;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -31,7 +32,8 @@ class SpotController extends Controller
 	{
 		$cities = City::with('state')->orderBy('state_id')->get();
 		$states = State::orderBy('name')->pluck('name', 'id');
-		return View('spot.create', compact('cities', 'states'));
+		$spot_categories = SpotCategory::orderBy('id')->pluck('name', 'id');
+		return View('spot.create', compact('cities', 'states', 'spot_categories'));
 	}
 
 	/**
@@ -49,12 +51,12 @@ class SpotController extends Controller
 				'title' => $request->get('title'),
 				'address' => $request->get('address'),
 				'neighborhood' => $request->get('neighborhood'),
-				'city' => $request->get('city'),
-				'state' => $request->get('state'),
-				'country' => 1, /*it's hardcoded for México*/
+				'city_id' => $request->get('city_id'),
+				'state_id' => $request->get('state_id'),
+				'country_id' => 1, /*it's hardcoded for México*/
 				'coords' => $request->get('coords'),
-				'category_id' => $request->get('category'),
-				'user_id' => Auth::user()->id ? : 0
+				'category_id' => $request->get('category_id'),
+				'user_id' => (Auth::check()) ? Auth::user()->id : 0
 			]);
 			
 			if ($spot->save())

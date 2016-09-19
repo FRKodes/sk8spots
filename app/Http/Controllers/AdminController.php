@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\City;
 use App\Spot;
+use App\SpotCategory;
 use App\State;
 use App\User;
 use App\Country;
@@ -52,8 +53,9 @@ class AdminController extends Controller
         $cities = City::with('state')->orderBy('state_id')->get();
         $states = State::orderBy('name')->pluck('name', 'id');
         $countries = Country::orderBy('name')->pluck('name', 'id');
+        $spot_categories = SpotCategory::orderBy('id')->pluck('name', 'id');
         $spot = Spot::findOrFail($id);
-        return View('admin.editspot', compact('spot', 'cities', 'states', 'countries'));
+        return View('admin.editspot', compact('spot', 'cities', 'states', 'countries', 'spot_categories'));
     }
 
     public function updatespot(Request $request, $id)

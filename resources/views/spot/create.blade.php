@@ -36,8 +36,8 @@
 			    <small class="text-danger">{{ $errors->first('neighborhood') }}</small>
 			</div>
 			
-			<div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
-				<select name="city" id="city" class="form-control" required="required">
+			<div class="form-group{{ $errors->has('city_id') ? ' has-error' : '' }}">
+				<select name="city_id" id="city_id" class="form-control" required="required">
 					<option value="">Selecciona una ciudad...</option>
 					@foreach($cities as $city)
 						<option value="{{ $city->id }}" data-state="{{ $city->state->name }}" data-state-id="{{ $city->state->id }}" >{{ $city->name }} ({{ $city->state->short_name }})</option>
@@ -52,14 +52,14 @@
 			    <small class="text-danger">{{ $errors->first('other_city') }}</small>
 			</div>
 			
-			<div class="form-group{{ $errors->has('state') ? ' has-error' : '' }}">
-			    {!! Form::select('state', $states, null, ['id' => 'state', 'class' => 'form-control hidden', 'required' => 'required']) !!}
-			    <small class="text-danger">{{ $errors->first('state') }}</small>
+			<div class="form-group{{ $errors->has('state_id') ? ' has-error' : '' }}">
+			    {!! Form::select('state_id', $states, null, ['id' => 'state_id', 'class' => 'form-control hidden', 'required' => 'required']) !!}
+			    <small class="text-danger">{{ $errors->first('state_id') }}</small>
 			</div>
 			
-			<div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
-			    {!! Form::text('country', null, ['class' => 'form-control', 'placeholder'=>'País', 'value'=>'México', 'required' => 'required']) !!}
-			    <small class="text-danger">{{ $errors->first('country') }}</small>
+			<div class="form-group{{ $errors->has('country_id') ? ' has-error' : '' }}">
+			    {!! Form::text('country_id', null, ['class' => 'form-control', 'placeholder'=>'País', 'value'=>'México', 'required' => 'required']) !!}
+			    <small class="text-danger">{{ $errors->first('country_id') }}</small>
 			</div>
 			<div class="form-group{{ $errors->has('coords') ? ' has-error' : '' }}">
 			    {!! Form::text('coords', null, ['class' => 'form-control', 'id'=>'coords', 'placeholder'=>'Agrega las coordenadas', 'required' => 'required']) !!}
@@ -71,9 +71,9 @@
 				<div class="map-drag" id="map-drag"></div>
 			</div>
 
-			<div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
-			    {!! Form::select('category', [1=>'Skatepark', 2=>'Street Spot', 3=>'Bowl'], null, ['id' => 'category', 'class' => 'form-control', 'required' => 'required']) !!}
-			    <small class="text-danger">{{ $errors->first('category') }}</small>
+			<div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
+			    {!! Form::select('category_id', $spot_categories, null, ['id' => 'category_id', 'class' => 'form-control', 'required' => 'required']) !!}
+			    <small class="text-danger">{{ $errors->first('category_id') }}</small>
 			</div>
 			{!! Form::submit('Enviar', ['class' => 'btn btn-primary green-btn pull-right']) !!}
 			{!! Form::close() !!}

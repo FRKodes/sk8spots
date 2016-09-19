@@ -102,9 +102,9 @@ function initMapDrag(){
 }
 
 (function() {
-	$('#city').change(function(){
+	$('#city_id').change(function(){
 		var option = $('option:selected', this).attr('data-state-id');
-		$('#state').val(option);
+		$('#state_id').val(option);
 
 		if (option == 'other') {
 			$('#other_city').removeClass('hidden');
@@ -114,7 +114,7 @@ function initMapDrag(){
 	});
 
 	$(document).ready(function() {
-	    $.ajax({    //create an ajax request to load_page.php
+	    $.ajax({
 	        type: "GET",
 	        url: "/api/getspots",
 	        success: function(response){

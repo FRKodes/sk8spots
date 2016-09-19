@@ -22,7 +22,7 @@
 					</div>
 					<div class="col-md-6">
 					@if($spot->user_id)
-						<p><b class="verde3">Subido por:</b> {{ $spot->user_id ? : 'N/A'}}</p>
+						<p><b class="verde3">Subido por:</b> {{ $spot->user_id ? $spot->user->username : 'N/A'}}</p>
 					@endif
 						<p>
 							<b class="verde3">Tags: </b>

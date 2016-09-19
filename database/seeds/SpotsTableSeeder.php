@@ -33,7 +33,7 @@ class SpotsTableSeeder extends Seeder
 			"state_id"=> 14,
 			"country_id"=> 1,
 			"coords"=>"20.670954, -103.405205",
-			"category_id"=>1
+			"category_id"=>2
 		]);
         
 		App\Spot::create([
@@ -45,7 +45,7 @@ class SpotsTableSeeder extends Seeder
 			"state_id"=> 14,
 			"country_id"=> 1,
 			"coords"=>"20.685602, -103.442861",
-			"category_id"=>1
+			"category_id"=>2
 		]);
        
 		App\Spot::create([
@@ -57,7 +57,7 @@ class SpotsTableSeeder extends Seeder
 			"state_id"=> 14,
 			"country_id"=> 1,
 			"coords"=>"20.754627, -103.385995",
-			"category_id"=>1
+			"category_id"=>2
         ]);
        
 		App\Spot::create([
@@ -69,7 +69,7 @@ class SpotsTableSeeder extends Seeder
 			"state_id"=> 14,
 			"country_id"=> 1,
 			"coords"=>"20.573432, -103.314326",
-			"category_id"=>1
+			"category_id"=>2
         ]);
 		
 		App\Spot::create([
@@ -81,7 +81,7 @@ class SpotsTableSeeder extends Seeder
 			"state_id"=> 14,
 			"country_id"=> 1,
 			"coords"=>"20.646643, -103.290536",
-			"category_id"=>1
+			"category_id"=>2
         ]);
 
 		App\Spot::create([
@@ -93,7 +93,7 @@ class SpotsTableSeeder extends Seeder
 			"state_id"=> 14,
 			"country_id"=> 1,
 			"coords"=>"20.623162, -103.321591",
-			"category_id"=>1
+			"category_id"=>2
         ]);
        
 		App\Spot::create([
@@ -117,7 +117,7 @@ class SpotsTableSeeder extends Seeder
 			"state_id"=> 14,
 			"country_id"=> 1,
 			"coords"=>"20.741649, -103.399106",
-			"category_id"=>1
+			"category_id"=>2
 		]);
 		
 		App\Spot::create([
@@ -129,7 +129,7 @@ class SpotsTableSeeder extends Seeder
 			"state_id"=> 14,
 			"country_id"=> 1,
 			"coords"=>"20.734278, -103.358667",
-			"category_id"=>1
+			"category_id"=>2
 		]);
 		
 		App\Spot::create([       
@@ -141,8 +141,63 @@ class SpotsTableSeeder extends Seeder
 			"state_id"=> 14,
 			"country_id"=> 1,
 			"coords"=>"20.704390, -103.288825",
+			"category_id"=>2
+        ]);
+		App\Spot::create([       
+			"title"=>"Jardín San José de Analco",
+			"address"=>"Calle Analco S/N",
+			"description"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"neighborhood"=>"Analco",
+			"city_id"=>36,
+			"state_id"=>14,
+			"country_id"=>1,
+			"coords"=>"20.667584, -103.341244",
 			"category_id"=>1
         ]);
+		App\Spot::create([
+			"title"=>"Spot del Globo",
+			"address"=>"Avenida 5 de Febrero 135B",
+			"description"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"neighborhood"=>"Las Conchas",
+			"city_id"=>36,
+			"state_id"=>14,
+			"country_id"=>1,
+			"coords"=>"20.661342, -103.343030",
+			"category_id"=>1
+        ]);
+		App\Spot::create([
+			"title"=>"10 Escalones Pila Seca",
+			"address"=>"Calle Donato Guerra 5",
+			"description"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"neighborhood"=>"Prados del Nilo",
+			"city_id"=>37,
+			"state_id"=>14,
+			"country_id"=>1,
+			"coords"=>"20.641733, -103.316936",
+			"category_id"=>1
+        ]);
+		App\Spot::create([
+			"title"=>"Escaleras CAAV",
+			"address"=>"Calle Miguel Lerdo de Tejada 20100",
+			"description"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"neighborhood"=>"Lafayette",
+			"city_id"=>36,
+			"state_id"=>14,
+			"country_id"=>1,
+			"coords"=>"20.671329, -103.370361",
+			"category_id"=>1
+        ]);
+		App\Spot::create([	
+			"title"=>"Escaleras CAAV",
+			"address"=>"Calle Miguel Lerdo de Tejada 20100",
+			"description"=>"El spot no es nada fácil, son unas escaleras con barandal pero lo que debes brincar es el barandal, al parecer no hay otra forma. Lo bueno es que tiene bastante espacio para agarrar vuelo.",
+			"neighborhood"=>"Lafayette",
+			"city_id"=>36,
+			"state_id"=>14,
+			"country_id"=>1,
+			"coords"=>"20.671329, -103.370361",
+			"category_id"=>1
+		]);
 
     }
 }

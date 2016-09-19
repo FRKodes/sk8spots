@@ -10,15 +10,20 @@ class Spot extends Model
 		'title',
 		'address',
 		'neighborhood',
-		'city',
-		'state',
-		'country',
+		'city_id',
+		'state_id',
+		'country_id',
 		'coords',
 		'user_id',
 		'category_id'
 	];
 
 	public function owner()
+	{
+		return $this->belongsTo(User::class);
+	}
+
+	public function user()
 	{
 		return $this->belongsTo(User::class);
 	}
