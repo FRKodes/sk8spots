@@ -52,6 +52,9 @@
 }
 
 /*COLORS PALLETE*/
+.verde1 {
+  color: #07ced2;
+}
 .verde2 {
   color: #419fa2;
 }
@@ -63,6 +66,15 @@
 }
 .back-verde3 {
   background-color: #165b5c;
+}
+.gris1 {
+  color: #f2f2f2;
+}
+.gris2 {
+  color: #e2e2e2;
+}
+.rojo {
+  color: #f00;
 }
 .lower {
   text-transform: lowercase;

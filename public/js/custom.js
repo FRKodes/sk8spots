@@ -118,7 +118,6 @@ function initMapDrag(){
 	        type: "GET",
 	        url: "/api/getspots",
 	        success: function(response){
-	            // console.log(response);
 	            initMap(response);
 	        }
 		});

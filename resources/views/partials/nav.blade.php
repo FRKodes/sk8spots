@@ -12,10 +12,9 @@
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="{{ url('/') }}">Inicio</a></li>
-				<li><a href="{{ url('/acerca-de') }}">Acerca de</a></li>
-				<li><a href="{{ url('/spot/create') }}">Agrega un spot</a></li>
-				<li><a href="{{ url('/contacto') }}">Contacto</a></li>
+				<li class="{{ (Request::path() == 'acerca-de') ? 'active' : '' }}"><a href="{{ url('/acerca-de') }}">Acerca de</a></li>
+				<li class="{{ (Request::path() == 'spot/create') ? 'active' : '' }}"><a href="{{ url('/spot/create') }}">Agrega un spot</a></li>
+				<li class="{{ (Request::path() == 'contacto') ? 'active' : '' }}"><a href="{{ url('/contacto') }}">Contacto</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				
