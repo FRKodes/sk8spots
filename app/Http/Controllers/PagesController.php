@@ -23,5 +23,10 @@ class PagesController extends Controller
     {
     	return view('pages.contacto');
     }
+
+    public function sendContactMail()
+    {
+        return 'ok';
+    }
     
 }

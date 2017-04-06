@@ -3,6 +3,7 @@
 Route::get('/', 'PagesController@index');
 Route::get('acerca-de', 'PagesController@acercade');
 Route::get('contacto', 'PagesController@contacto');
+Route::post('send_contact_mail', 'PagesController@sendContactMail');
 Route::resource('spot', 'SpotController');
 
 Route::get('api/getspots', 'ApiController@getSpots');

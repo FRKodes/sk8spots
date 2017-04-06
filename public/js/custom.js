@@ -121,6 +121,46 @@ function initMapDrag(){
 	            initMap(response);
 	        }
 		});
+
+		/*validator*/
+		$(function(){ 
+		  var formSettings = {
+		    singleError : function($field, rules){ 
+		      $field.closest('.form-group').removeClass('valid').addClass('error');
+		      $('.alert_field').fadeIn();
+		    },
+		    singleSuccess : function($field, rules){ 
+		      $field.closest('.form-group').removeClass('error').addClass('valid');
+		      $('.alert_field').fadeOut();
+		    },
+		    overallSuccess : function(){
+		      var form      = $('#contactForm'),
+		        nombre    	= form.find( "input[name='nombre']").val(),
+		        email     	= form.find( "input[name='email']").val(),
+		        telefono	= form.find( "input[name='telefono']").val(),
+		        _token		= form.find( "input[name='_token']").val(),
+		        comentario	= form.find( "textarea[name='comentario']").val(),
+		        action    	= form.attr( "action"),
+		        url       	= action;
+
+		      var posting = $.post(
+		        url, { 	nombre: nombre,
+						email: email,
+		        		telefono: telefono,
+		        		_token: _token,
+		        		comentario: comentario }
+		      );
+		      posting.done(function( data ){
+		        console.log(data);
+		        $('#contactForm')[0].reset();
+		        $('.email-sent-alert').fadeIn().delay(3000).fadeOut();
+		      });
+		    },
+		    overallError : function($form, fields){ /*Do nothing, just show the error fields*/ },
+		      autoDetect : true, debug : true
+		    };
+		  var $validate = $('#contactForm').validate(formSettings).data('validate');
+		});
 	});
 
 })(this);

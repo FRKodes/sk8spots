@@ -23,6 +23,7 @@ elixir(function(mix) {
     .scripts([
     	'jquery.js',
     	'bootstrap.js',
+        'validate.js',
         'custom.js'
     ],'public/js/all.js', 'public/js')
     .version(['css/all.css', 'js/all.js'])

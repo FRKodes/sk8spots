@@ -247,6 +247,24 @@ body {
   height: auto;
   background-color: #fff;
 }
+/*CONTACTO*/
+.alert_field {
+  color: rgba(255,0,0,0.8);
+  display: none;
+}
+.email-sent-alert {
+  background-color: #165b5c;
+  color: #fff;
+  text-align: center;
+  padding: 40px 30px;
+  font-size: 1.2em;
+  position: relative;
+  margin-top: -300px;
+  display: none;
+}
+textarea {
+  resize: none;
+}
 footer {
   color: #fff;
   background: #67cda7;
@@ -276,6 +294,14 @@ footer .social li a:hover {
   text-decoration: none;
 }
 @media screen and (min-width: 768px) {
+  .nav>li>a {
+    padding: 15px 6px;
+  }
+  .email-sent-alert {
+    padding: 100px 50px;
+    font-size: 1.4em;
+    margin-top: -350px;
+  }
   footer .social-column {
     text-align: left;
   }
@@ -311,6 +337,9 @@ footer .social li a:hover {
   }
 }
 @media screen and (min-width: 992px) {
+  .nav>li>a {
+    padding: 15px;
+  }
   .map {
     height: 550px;
   }
