@@ -14,7 +14,7 @@
 			</p>
 
 			<p>
-				Este es un proyecto que surge como una iniciativa, esperando que cada vez más miembros de la comunidad skate mundial se una para crecer cada vez más y así más skaters puedan ser beneficiados, por que al final del día lo único que queremos hacer es ¡PATINAR!
+				Este es un proyecto que surge como una iniciativa, que intenta promover la práctica del skateboarding. Esperamos que cada vez más skaters se unan a la comunidad skate y aporten su granito de arena para ser mejores y así más skaters puedan ser beneficiados, porque al final del día lo único que queremos hacer es ¡PATINAR!
 			</p>
 		</div>
 	</div>
