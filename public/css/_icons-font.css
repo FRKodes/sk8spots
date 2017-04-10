@@ -38,12 +38,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-facebook:before {
+.icon-instagram:before {
   content: "\61";
 }
-.icon-instagram:before {
+.icon-facebook:before {
   content: "\62";
-}
-.icon-youtube:before {
-  content: "\63";
 }
