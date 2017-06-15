@@ -18,6 +18,7 @@
 
 	<footer>@include('partials.footer')</footer>
 	@include('partials.google')
+	@include('partials.hotjar')
 	<script src="{{ elixir("js/all.js") }}"></script>
 
 	@if(\Request::path() == '/')
