@@ -17,7 +17,7 @@
 	<section>@include('partials.adsense')</section>
 
 	<footer>@include('partials.footer')</footer>
-	
+	@include('partials.google')
 	<script src="{{ elixir("js/all.js") }}"></script>
 
 	@if(\Request::path() == '/')
