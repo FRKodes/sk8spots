@@ -27,7 +27,7 @@ class AdminController extends Controller
 
     public function users()
     {
-    	$users = User::orderBy('id', 'desc')->paginate(15);
+    	$users = User::orderBy('id', 'desc')->paginate(30);
     	return View('admin.users', compact('users'));
     }
 
@@ -39,7 +39,7 @@ class AdminController extends Controller
 
     public function spots()
     {
-    	$spots = Spot::orderBy('id', 'desc')->paginate(10);
+    	$spots = Spot::orderBy('id', 'desc')->paginate(30);
     	return View('admin.spots', compact('spots'));
     }
 
