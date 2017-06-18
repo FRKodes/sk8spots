@@ -360,6 +360,9 @@ footer .social li a:hover {
   text-decoration: none;
 }
 @media screen and (min-width: 768px) {
+  .map-drag-container p {
+    text-align: center;
+  }
   .nav>li>a {
     padding: 15px 6px;
   }
@@ -408,6 +411,9 @@ footer .social li a:hover {
   }
   .map {
     height: 550px;
+  }
+  .map-drag {
+    height: 600px;
   }
 }
 

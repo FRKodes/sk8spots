@@ -18,7 +18,7 @@
 
 <div class="container"><div class="row"><hr></div></div>
 
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 
@@ -66,18 +66,28 @@
 			    <small class="text-danger">{{ $errors->first('coords') }}</small>
 			</div>
 			
-			<div class="map-drag-container">
-				<p class="green italic">Usa el mapa que está debajo, arrastra y suelta el pin en el sobre el spot para obtener las coordenadas.</p>
-				<div class="map-drag" id="map-drag"></div>
-			</div>
+		</div>
+	</div>
 
+	
+	<div class="row">
+		<div class="map-drag-container">
+			<p class="green italic col-xs-12">Usa el mapa que está debajo, arrastra y suelta el pin en el sobre el spot para obtener las coordenadas.</p>
+			<div class="map-drag" id="map-drag"></div>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+			
 			<div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
 			    {!! Form::select('category_id', $spot_categories, null, ['id' => 'category_id', 'class' => 'form-control', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('category_id') }}</small>
 			</div>
 			{!! Form::submit('Enviar', ['class' => 'btn btn-primary green-btn pull-right']) !!}
-			{!! Form::close() !!}
 		</div>
+		{!! Form::close() !!}
 	</div>
 </div>
 @endsection
