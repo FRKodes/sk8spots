@@ -11,7 +11,7 @@
 	</div>
 </div>
 
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 
@@ -74,14 +74,13 @@
 		</div>
 	</div>
 
-	<div class="container-fuid">
-		<div class="row">
-			<div class="map-drag-container">
-				<p class="green italic">Usa el mapa que está debajo, arrastra y suelta el pin en el sobre el spot para obtener las coordenadas.</p>
-				<div class="map-drag" id="map-drag"></div>
-			</div>
+	<div class="row">
+		<div class="map-drag-container">
+			<p class="green italic">Usa el mapa que está debajo, arrastra y suelta el pin en el sobre el spot para obtener las coordenadas.</p>
+			<div class="map-drag" id="map-drag"></div>
 		</div>
 	</div>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
