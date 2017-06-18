@@ -71,23 +71,33 @@
 			    {!! Form::text('coords', $spot->coords, ['class' => 'form-control', 'id'=>'coords', 'placeholder'=>'Agrega las coordenadas', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('coords') }}</small>
 			</div>
-			
+		</div>
+	</div>
+
+	<div class="container-fuid">
+		<div class="row">
 			<div class="map-drag-container">
 				<p class="green italic">Usa el mapa que está debajo, arrastra y suelta el pin en el sobre el spot para obtener las coordenadas.</p>
 				<div class="map-drag" id="map-drag"></div>
 			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+				
+				<div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
+				    {!! Form::select('category_id', $spot_categories , $spot->category_id, ['id' => 'category_id', 'class' => 'form-control', 'required' => 'required']) !!}
+				    <small class="text-danger">{{ $errors->first('category_id') }}</small>
+				</div>
 
-			<div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
-			    {!! Form::select('category_id', $spot_categories , $spot->category_id, ['id' => 'category_id', 'class' => 'form-control', 'required' => 'required']) !!}
-			    <small class="text-danger">{{ $errors->first('category_id') }}</small>
+				<div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
+				    {!! Form::select('status', [0=>'Inactivo', 1=>'Activo'], $spot->status, ['id' => 'status', 'class' => 'form-control', 'required' => 'required']) !!}
+				    <small class="text-danger">{{ $errors->first('status') }}</small>
+				</div>
+				<a href="{{ url('/admin/spot/'.$spot->id) }}" class="btn btn-primary pull-left">< Regresar al spot</a>
+				{!! Form::submit('Actualizar', ['class' => 'btn btn-primary green-btn pull-right']) !!}
 			</div>
-
-			<div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
-			    {!! Form::select('status', [0=>'Inactivo', 1=>'Activo'], $spot->status, ['id' => 'status', 'class' => 'form-control', 'required' => 'required']) !!}
-			    <small class="text-danger">{{ $errors->first('status') }}</small>
-			</div>
-			<a href="{{ url('/admin/spot/'.$spot->id) }}" class="btn btn-primary pull-left">< Regresar al spot</a>
-			{!! Form::submit('Actualizar', ['class' => 'btn btn-primary green-btn pull-right']) !!}
 			{!! Form::close() !!}
 		</div>
 	</div>

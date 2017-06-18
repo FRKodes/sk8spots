@@ -62,8 +62,25 @@ function initMap(pointers) {
 }
 
 function initMapDrag(){
+		
+		console.log('custom position map!');
 
 		var myLatlngDrag = new google.maps.LatLng(20.674894,-103.354793);
+
+		var spot_coords = null;
+		if (spot_coords = document.getElementById('coords').value) {
+			spot_coords = spot_coords.replace(' ', '');
+			spot_coords.split(',');
+			var lat = spot_coords.split(',')[0]
+			var lng = spot_coords.split(',')[1]
+
+			var myLatlngDrag = new google.maps.LatLng(lat,lng);
+			console.log(document.getElementById('coords').value);
+			console.log(spot_coords + ' - ' + myLatlngDrag);
+			console.log(lat + ',' + lng);
+
+		}
+
 		var mapOptions = {
 		  zoom: 12,
 		  scrollwheel: false,
