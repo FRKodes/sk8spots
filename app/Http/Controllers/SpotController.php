@@ -8,6 +8,8 @@ use App\SpotCategory;
 use App\Country;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Hash;
 
 use App\Http\Requests;
 
@@ -59,8 +61,25 @@ class SpotController extends Controller
 				'user_id' => (Auth::check()) ? Auth::user()->id : 0
 			]);
 			
+			
+			// $s3 = \Storage::disk('s3');
+			// $photos = $request->file('photos');
+
+			// if ($photos) {
+			// 	foreach ($photos as $photo) {
+			// 		$imageFileName = time() . '-' . rand(1,100) . '.' . $photo->getClientOriginalExtension();
+			// 		$filePath = '/spots/' . $imageFileName;
+			// 		$s3->put($filePath, file_get_contents($photo), 'public');
+			// 		echo $imageFileName.' - ';
+			// 	}
+
+			// 	dd('ok!');
+			// }
+
 			if ($spot->save())
 				$request->session()->flash('alert-success', '¡Gracias por colaborar! El spot fué guardado exitosamente, nuestro equipo lo revisará y en breve estará en la lista de resultados.');
+
+			
 
 			return redirect()->back();
 		}

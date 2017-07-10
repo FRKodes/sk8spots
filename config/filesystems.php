@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'local',
+    'default' => 's3',
 
     /*
     |--------------------------------------------------------------------------
@@ -56,10 +56,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => 'your-key',
-            'secret' => 'your-secret',
-            'region' => 'your-region',
-            'bucket' => 'your-bucket',
+            'key' => getenv('S3_KEY'),
+            'secret' => getenv('S3_SECRET'),
+            'region' => getenv('S3_REGION'),
+            'bucket' => getenv('S3_BUCKET'),
         ],
 
     ],

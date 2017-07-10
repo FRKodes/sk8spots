@@ -16,7 +16,7 @@
 				<div class="row">
 					<div class="col-md-6">
 						<p><b class="verde3">Dirección: </b>{{ $spot->address }}</p>
-						<p><b class="verde3">Colinia: </b>{{ $spot->neighborhood }}</p>
+						<p><b class="verde3">Colonia: </b>{{ $spot->neighborhood }}</p>
 						<p><b class="verde3">Ciudad: </b>{{ $spot->city->name }}</p>
 						<p><b class="verde3">Estado: </b>{{ $spot->state->name }}</p>
 						<p><b class="verde3">País: </b>{{ $spot->country->name }}</p>
