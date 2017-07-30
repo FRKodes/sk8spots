@@ -75,8 +75,22 @@ class AdminController extends Controller
         $spot->category_id = $request->get('category_id');
         $spot->status = $request->get('status');
         
+        //the uploading photos part begins
+        $s3 = \Storage::disk('s3');
+        $photos = $request->file('photos');
+
+        if ($photos) {
+            foreach ($photos as $photo) {
+                $imageFileName = time() . '-' . rand(1,100) . '.' . $photo->getClientOriginalExtension();
+                $filePath = '/spots/' . $imageFileName;
+                $s3->put($filePath, file_get_contents($photo), 'public');
+                $spot->images()->create(['name' => $imageFileName]);
+            }
+        }
         if ($spot->save()){
             $request->session()->flash('alert-success', 'El spot fué actualizado exitosamente.');
+
+
             return redirect('/admin/spot/'.$spot->id);
         }
 

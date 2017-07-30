@@ -118,6 +118,12 @@ body
 	.panel-heading
 		background-color verde3
 		color white
+.last-one-home-item
+	margin-top 20px
+	margin-bottom 20px
+	img
+		width 100%
+		height auto
 .map
 	background-size cover
 	border-bottom 1px dashed verde3
@@ -206,13 +212,15 @@ body
 		img
 			width 100%
 			height auto
-	.spot-images
-		.image-item
-			margin-bottom 30px
-			img
-				width 100%
-				height auto
-				background-color white
+.spot-images
+	.image-item
+		margin-bottom 30px
+		height 120px
+		overflow hidden
+		img
+			width 100%
+			height auto
+				
 /*CONTACTO*/
 .alert_field
 	color rgba(red, .8)
@@ -256,6 +264,11 @@ footer
 				&:hover
 					transition color .5s ease
 					text-decoration none
+@media screen and (min-width: 480px)
+	.spot-detail
+		.spot-images
+			.image-item
+				height 200px
 @media screen and (min-width: 768px)
 	.map-drag-container
 		p
@@ -266,6 +279,14 @@ footer
 		padding 100px 50px
 		font-size 1.4em
 		margin-top -350px
+	.last-one-home-item
+		margin-top 20px
+		margin-bottom 20px
+		.photo
+			overflow hidden
+			height 120px
+			display flex
+			align-items center
 	footer
 		.social-column
 			text-align left
@@ -296,3 +317,13 @@ footer
 		height 550px
 	.map-drag
 		height 600px
+	.last-one-home-item
+		.photo
+			overflow hidden
+			height 130px
+			display flex
+			align-items center
+@media screen and (min-width: 1200px)
+	.last-one-home-item
+		.photo
+			height 150px

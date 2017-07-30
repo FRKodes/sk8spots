@@ -17,23 +17,23 @@
 
 <div class="container spots-list">
 	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-			<div class="panel panel-default">
-			
-				<div class="panel-heading">
-					<h3 class="panel-title">¡Últimos Sk8 Spots agregados!</h3>
+		<h3 class="panel-title">¡Últimos Sk8 Spots agregados!</h3>
+		@if($lastOnes)
+			@foreach($lastOnes as $lastOne)
+				<div class="col-sm-4 col-md-3 last-one-home-item">
+					<div class="photo">
+						<a href="{{ url('spot').'/'.$lastOne->id }}">
+							<img src="https://s3.amazonaws.com/sk8spotsmx/spots/{{ $lastOne->images()->get()->first()->name }}" alt="{{ $lastOne->title }}">
+						</a>
+					</div>
+					<div class="info">
+						<p><a href="{{ url('spot').'/'.$lastOne->id }}">{{ $lastOne->title }} <span class="verde2">({{ $lastOne->category->name }})</span></a></p>
+						<p>Municipio: {{ $lastOne->city->name }}</p>
+					</div>
 				</div>
-				
-				@if($lastOnes)
-					<ul class="list-group">
-						@foreach($lastOnes as $lastOne)
-							<li class="list-group-item"><a href="{{ url('spot').'/'.$lastOne->id }}">{{ $lastOne->title }} <span class="verde2">({{ $lastOne->category->name }})</span></a> - Municipio: {{ $lastOne->city->name }}</li>
-						@endforeach
-					</ul>
-				@endif
+			@endforeach
+		@endif
 
-			</div>
-		</div>
 	</div>
 </div>
 @endsection

@@ -11,7 +11,7 @@ class PagesController extends Controller
 {
 	public function index()
 	{   
-		$lastOnes = Spot::where('status', '=', 1)->orderBy('id', 'desc')->take(10)->get();
+		$lastOnes = Spot::where('status', '=', 1)->orderBy('id', 'desc')->take(12)->get();
 		return view('pages.index', compact('lastOnes'));
 	}
 

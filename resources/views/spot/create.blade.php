@@ -77,15 +77,15 @@
 		</div>
 	</div>
 
-	{{-- <div class="row">
+	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 			<p><strong>Agrega algunas imágenes del spot</strong></p>
 			<div class="form-group{{ $errors->has('photos') ? ' has-error' : '' }}">
-			    {!! Form::file('photos[]', ['required' => 'required', 'multiple']) !!}
+			    {!! Form::file('photos[]', ['multiple']) !!}
 			    <p class="help-block">Puedes seleccionar varias imágenes a mismo tiempo.</p>
 			</div>
 		</div>
-	</div> --}}
+	</div>
 
 
 	<div class="row">

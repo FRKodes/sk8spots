@@ -47,4 +47,9 @@ class Spot extends Model
 	{
 		return $this->belongsTo(Country::class);
 	}
+
+	public function images()
+	{
+		return $this->hasMany(Image::class);
+	}
 }
