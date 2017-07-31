@@ -15,9 +15,13 @@
 	</div>
 </div>
 
+
+<section>@include('partials.adsense')</section>
+
+
 <div class="container spots-list">
 	<div class="row">
-		<h3 class="panel-title">¡Últimos Sk8 Spots agregados!</h3>
+		<h2 class="text-center verde2">¡Últimos Sk8 Spots agregados!</h2>
 		@if($lastOnes)
 			@foreach($lastOnes as $lastOne)
 				<div class="col-sm-4 col-md-3 last-one-home-item">
