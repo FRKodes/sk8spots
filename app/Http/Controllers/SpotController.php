@@ -6,8 +6,11 @@ use App\City;
 use App\State;
 use App\SpotCategory;
 use App\Country;
+use App\Image;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Hash;
 
 use App\Http\Requests;
 
@@ -59,8 +62,28 @@ class SpotController extends Controller
 				'user_id' => (Auth::check()) ? Auth::user()->id : 0
 			]);
 			
+
 			if ($spot->save())
 				$request->session()->flash('alert-success', '¡Gracias por colaborar! El spot fué guardado exitosamente, nuestro equipo lo revisará y en breve estará en la lista de resultados.');
+
+			
+			//the uploading photos part begins
+			$s3 = \Storage::disk('s3');
+			$photos = $request->file('photos');
+
+			if ($photos) {
+				foreach ($photos as $photo) {
+					$imageFileName = time() . '-' . rand(1,100) . '.' . $photo->getClientOriginalExtension();
+					$filePath = '/spots/' . $imageFileName;
+					$s3->put($filePath, file_get_contents($photo), 'public');
+
+					$spot->images()->create(['name' => $imageFileName]);
+					//each file needs to be attached to the spot in the db
+					
+				}
+
+				// at this time the images were uploaded
+			}
 
 			return redirect()->back();
 		}

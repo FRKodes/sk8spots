@@ -16,7 +16,7 @@
 				<div class="row">
 					<div class="col-md-6">
 						<p><b class="verde3">Dirección: </b>{{ $spot->address }}</p>
-						<p><b class="verde3">Colinia: </b>{{ $spot->neighborhood }}</p>
+						<p><b class="verde3">Colonia: </b>{{ $spot->neighborhood }}</p>
 						<p><b class="verde3">Ciudad: </b>{{ $spot->city->name }}</p>
 						<p><b class="verde3">Estado: </b>{{ $spot->state->name }}</p>
 						<p><b class="verde3">País: </b>{{ $spot->country->name }}</p>
@@ -47,17 +47,19 @@
 			<h2 class="verde2 col-xs-12">Fotos del spot</h2>
 		</div>
 		<div class="row spot-images">
-			<div class="col-xs-12">
-				<p>Por el momento no hay imágenes de este spot.</p>
-			</div>
+			<div class="container">
+				
+			@foreach($spot->images as $image)
+				<div class="col-xs-6 col-sm-4 col-md-3 image-item">
+					<img src="https://s3.amazonaws.com/sk8spotsmx/spots/{{ $image->name }}" alt="{{ $image->name }}">
+				</div>
+			@endforeach
+
+			@if(count($spot->images)==0)
+				<div class="col-xs-12"><p>Por el momento no hay imágenes de este spot.</p></div>
+			@endif
 			
-			{{-- <div class="col-xs-6 col-md-4 image-item"><img src="https://dummyimage.com/300x200/000/fff" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></div>
-			<div class="col-xs-6 col-md-4 image-item"><img src="https://dummyimage.com/300x200/000/fff" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></div>
-			<div class="col-xs-6 col-md-4 image-item"><img src="https://dummyimage.com/300x200/000/fff" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></div>
-			<div class="col-xs-6 col-md-4 image-item"><img src="https://dummyimage.com/300x200/000/fff" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></div>
-			<div class="col-xs-6 col-md-4 image-item"><img src="https://dummyimage.com/300x200/000/fff" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></div>
-			<div class="col-xs-6 col-md-4 image-item"><img src="https://dummyimage.com/300x200/000/fff" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit."></div>
-			 --}}
+			</div>
 		</div>
 	</div>
 @endsection

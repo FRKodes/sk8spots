@@ -29,6 +29,23 @@
 .capitalize {
   text-transform: capitalize;
 }
+.img-cien {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.m-top-20 {
+  margin-top: 20px;
+}
+.m-bottom-0 {
+  margin-bottom: 0px;
+}
+.m-top-0 {
+  margin-top: 0px;
+}
+.m-bottom-20 {
+  margin-bottom: 20px;
+}
 h1 {
   color: #419fa2;
 }
@@ -137,6 +154,14 @@ body {
 .panel-default .panel-heading {
   background-color: #165b5c;
   color: #fff;
+}
+.last-one-home-item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.last-one-home-item img {
+  width: 100%;
+  height: auto;
 }
 .map {
   background-size: cover;
@@ -249,13 +274,14 @@ body {
   width: 100%;
   height: auto;
 }
-.spot-detail .spot-images .image-item {
+.spot-images .image-item {
   margin-bottom: 30px;
+  height: 120px;
+  overflow: hidden;
 }
-.spot-detail .spot-images .image-item img {
+.spot-images .image-item img {
   width: 100%;
   height: auto;
-  background-color: #fff;
 }
 /*CONTACTO*/
 .alert_field {
@@ -303,7 +329,15 @@ footer .social li a:hover {
   transition: color 0.5s ease;
   text-decoration: none;
 }
+@media screen and (min-width: 480px) {
+  .spot-detail .spot-images .image-item {
+    height: 200px;
+  }
+}
 @media screen and (min-width: 768px) {
+  .map-drag-container p {
+    text-align: center;
+  }
   .nav>li>a {
     padding: 15px 6px;
   }
@@ -311,6 +345,18 @@ footer .social li a:hover {
     padding: 100px 50px;
     font-size: 1.4em;
     margin-top: -350px;
+  }
+  .last-one-home-item {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .last-one-home-item .photo {
+    overflow: hidden;
+    height: 120px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
   }
   footer .social-column {
     text-align: left;
@@ -352,6 +398,22 @@ footer .social li a:hover {
   }
   .map {
     height: 550px;
+  }
+  .map-drag {
+    height: 600px;
+  }
+  .last-one-home-item .photo {
+    overflow: hidden;
+    height: 130px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .last-one-home-item .photo {
+    height: 150px;
   }
 }
 
