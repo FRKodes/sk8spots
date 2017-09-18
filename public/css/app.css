@@ -159,9 +159,17 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.last-one-home-item img {
+.last-one-home-item .photo {
+  background-color: rgba(22,91,92,0.2);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: none;
+  height: 160px;
+}
+.last-one-home-item .photo a {
+  display: block;
+  height: 100%;
   width: 100%;
-  height: auto;
 }
 .map {
   background-size: cover;
@@ -352,7 +360,7 @@ footer .social li a:hover {
   }
   .last-one-home-item .photo {
     overflow: hidden;
-    height: 120px;
+    height: 160px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -404,7 +412,7 @@ footer .social li a:hover {
   }
   .last-one-home-item .photo {
     overflow: hidden;
-    height: 130px;
+    height: 190px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -413,7 +421,7 @@ footer .social li a:hover {
 }
 @media screen and (min-width: 1200px) {
   .last-one-home-item .photo {
-    height: 150px;
+    height: 200px;
   }
 }
 

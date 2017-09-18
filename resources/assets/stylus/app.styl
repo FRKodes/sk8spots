@@ -127,9 +127,16 @@ body
 .last-one-home-item
 	margin-top 20px
 	margin-bottom 20px
-	img
-		width 100%
-		height auto
+	.photo
+		background-color rgba(verde3, .2)
+		background-size cover
+		background-position center center
+		background-repeat none
+		height 160px
+		a
+			display block
+			height 100%
+			width 100%
 .map
 	background-size cover
 	border-bottom 1px dashed verde3
@@ -290,7 +297,7 @@ footer
 		margin-bottom 20px
 		.photo
 			overflow hidden
-			height 120px
+			height 160px
 			display flex
 			align-items center
 	footer
@@ -326,10 +333,10 @@ footer
 	.last-one-home-item
 		.photo
 			overflow hidden
-			height 130px
+			height 190px
 			display flex
 			align-items center
 @media screen and (min-width: 1200px)
 	.last-one-home-item
 		.photo
-			height 150px
+			height 200px

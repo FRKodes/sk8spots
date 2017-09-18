@@ -34,9 +34,9 @@
 		@if($lastOnes)
 			@foreach($lastOnes as $lastOne)
 				<div class="col-sm-4 col-md-3 last-one-home-item">
-					<div class="photo">
+					<div class="photo" style="background-image: url(https://s3.amazonaws.com/sk8spotsmx/spots/{{ $lastOne->images()->get()->first()->name }})">
 						<a href="{{ url('spot').'/'.$lastOne->id }}">
-							<img src="https://s3.amazonaws.com/sk8spotsmx/spots/{{ $lastOne->images()->get()->first()->name }}" alt="{{ $lastOne->title }}">
+							{{-- <img src="" alt="{{ $lastOne->title }}"> --}}
 						</a>
 					</div>
 					<div class="info">
