@@ -1,5 +1,12 @@
 @extends('app')
 
+@section('spot_description', $spot->description)
+
+@section('titlepage', $spot->title)
+
+@section('url', 'spot/'.$spot->slug)
+
+
 @section('content')
 	<div class="container spot-detail">
 		<hr>

@@ -169,7 +169,7 @@ class SpotsTableSeeder extends Seeder
         ]);
 		App\Spot::create([
 			"title"=>"Spot del Globo",
-			"slug"=>"spot-del-globo",
+			"slug"=>"museo-el-globo",
 			"address"=>"Avenida 5 de Febrero 135B",
 			"description"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			"neighborhood"=>"Las Conchas",
