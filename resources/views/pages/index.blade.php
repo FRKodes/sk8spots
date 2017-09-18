@@ -36,7 +36,7 @@
 				<div class="col-sm-4 col-md-3 last-one-home-item">
 					<div class="photo">
 						<a href="{{ url('spot').'/'.$lastOne->id }}">
-							{{-- <img src="https://s3.amazonaws.com/sk8spotsmx/spots/{{ $lastOne->images()->get()->first()->name }}" alt="{{ $lastOne->title }}"> --}}
+							<img src="https://s3.amazonaws.com/sk8spotsmx/spots/{{ $lastOne->images()->get()->first()->name }}" alt="{{ $lastOne->title }}">
 						</a>
 					</div>
 					<div class="info">
