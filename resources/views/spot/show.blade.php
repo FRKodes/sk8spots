@@ -1,11 +1,9 @@
 @extends('app')
 
 @section('spot_description', $spot->description)
-
 @section('titlepage', $spot->title)
-
+@section('detail_image', 'https://maps.googleapis.com/maps/api/staticmap?center='.$spot->coords.'&zoom=15&size=600x600&maptype=roadmap&markers='.$spot->coords.'&key=AIzaSyAP9skepfDL3L5pB4oF0Y1eey1BdF2trcI')
 @section('url', 'spot/'.$spot->slug)
-
 
 @section('content')
 	<div class="container spot-detail">

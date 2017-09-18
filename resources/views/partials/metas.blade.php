@@ -7,8 +7,10 @@
 <meta property="og:type"               content="article" />
 <meta property="og:title"              content="@yield('titlepage')" />
 <meta property="og:description"        content="@yield('spot_description', 'Encuentra lugares para patinar en tu ciudad #skateOrDie. Únete a la comunidad de skate más grande de México.')" />
+<meta property="og:image"              content="@yield('detail_image')" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@sk8spotsmx" />
 <meta name="twitter:title" content="@yield('titlepage')" />
 <meta name="twitter:description" content="@yield('spot_description', 'Encuentra lugares para patinar en tu ciudad #skateOrDie. Únete a la comunidad de skate más grande de México.')" />
+<meta name="twitter:image" content="@yield('detail_image')" />
 <meta name="author" content="Antonio Calderón @FRKodes">
