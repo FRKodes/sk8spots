@@ -63,6 +63,7 @@ class AdminController extends Controller
         $input = $request->all();
         $spot = Spot::findOrFail($id);
         $spot->title = $request->get('title');
+        $spot->slug = $request->get('slug');
         $spot->address = $request->get('address');
         $spot->description = $request->get('description');
         $spot->neighborhood = $request->get('neighborhood');
@@ -79,7 +80,7 @@ class AdminController extends Controller
         $s3 = \Storage::disk('s3');
         $photos = $request->file('photos');
 
-        if ($photos) {
+        if ($photos[0] != NULL) {
             foreach ($photos as $photo) {
                 $imageFileName = time() . '-' . rand(1,100) . '.' . $photo->getClientOriginalExtension();
                 $filePath = '/spots/' . $imageFileName;

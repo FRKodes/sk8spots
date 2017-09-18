@@ -75,7 +75,7 @@ function initMap(pointers) {
 
 		google.maps.event.addListener(marker, 'click', (function(marker, i) {
 			return function() {
-				infowindow.setContent(locations[i].title + '<br />' + locations[i].address + '<br /><a href="/spot/' + locations[i].id + '" title="Ver detalle del spot">¡Ver más!</a> ');
+				infowindow.setContent(locations[i].title + '<br />' + locations[i].address + '<br /><a href="/spot/' + locations[i].slug + '" title="Ver detalle del spot">¡VER ESTE SPOT!</a> ');
 				infowindow.open(map, marker);
 			}
 		})(marker, i));

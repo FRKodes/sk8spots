@@ -20,6 +20,10 @@
 			    {!! Form::text('title', $spot->title, ['class' => 'form-control', 'placeholder'=>'Escribe el título del spot', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('title') }}</small>
 			</div>
+			<div class="form-group{{ $errors->has('slug') ? ' has-error' : '' }}">
+			    {!! Form::text('slug', $spot->slug, ['class' => 'form-control', 'placeholder'=>'Escribe el título del spot', 'required' => 'required']) !!}
+			    <small class="text-danger">{{ $errors->first('slug') }}</small>
+			</div>
 			<div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
 			    {!! Form::text('address', $spot->address, ['class' => 'form-control', 'placeholder'=>'Agrega la dirección. Ej. Av. Vallarta 1234', 'required' => 'required']) !!}
 			    <small class="text-danger">{{ $errors->first('address') }}</small>

@@ -55,7 +55,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'host' => getenv('DB_HOST') ? : 'localhost',
-            // 'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
+            'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
             'port' => getenv('DB_PORT') ? : '3306',
             'database' => getenv('DB_DATABASE') ? : 'sk8spots',
             'username' => getenv('DB_USERNAME') ? : 'root',

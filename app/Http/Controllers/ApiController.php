@@ -10,7 +10,7 @@ class ApiController extends Controller
 {
     public function getSpots()
     {
-    	$spots = Spot::where('status', '=', 1)->select(array('id', 'title', 'address', 'coords'))->orderBy('id', 'desc')->get();
+    	$spots = Spot::where('status', '=', 1)->select(array('slug', 'title', 'address', 'coords'))->orderBy('id', 'desc')->get();
     	return $spots;
     }
 }

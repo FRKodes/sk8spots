@@ -50,8 +50,12 @@ class SpotController extends Controller
 
 		if ($request) {
 
+			$slug = str_replace(' ', '-', $request->get('title'));
+			$slug .= "_" . rand(1,1000);
+
 			$spot = Spot::create([
 				'title' => $request->get('title'),
+				'slug' => $slug,
 				'address' => $request->get('address'),
 				'neighborhood' => $request->get('neighborhood'),
 				'city_id' => $request->get('city_id'),
@@ -71,7 +75,9 @@ class SpotController extends Controller
 			$s3 = \Storage::disk('s3');
 			$photos = $request->file('photos');
 
-			if ($photos) {
+			// var_dump($photos);
+
+			if ($photos[0] != NULL) {
 				foreach ($photos as $photo) {
 					$imageFileName = time() . '-' . rand(1,100) . '.' . $photo->getClientOriginalExtension();
 					$filePath = '/spots/' . $imageFileName;
@@ -98,9 +104,10 @@ class SpotController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function show($id)
+	public function show($slug)
 	{
-		$spot = Spot::findOrFail($id);
+
+		$spot = Spot::whereSlug($slug)->first();
 		return View('spot.show', compact('spot'));
 	}
 

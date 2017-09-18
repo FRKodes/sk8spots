@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImagesTable extends Migration
+class AddingTheSlugFieldToTheTble extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,8 @@ class CreateImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('spot_images', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('spot_id');
-            $table->string('name');
-            $table->timestamps();
+        Schema::table('spots', function (Blueprint $table) {
+            $table->string('slug')->after('title')->unique();
         });
     }
 
@@ -27,6 +24,8 @@ class CreateImagesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('spot_images');
+        Schema::table('spots', function (Blueprint $table) {
+            $table->dropColumn('slug');
+        });
     }
 }

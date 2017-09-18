@@ -8,6 +8,7 @@ class Spot extends Model
 {
 	protected $fillable = [
 		'title',
+		'slug',
 		'address',
 		'neighborhood',
 		'city_id',
