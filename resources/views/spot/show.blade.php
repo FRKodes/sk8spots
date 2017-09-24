@@ -55,7 +55,9 @@
 			<div class="container">
 				
 			@foreach($spot->images as $image)
-				<div class="col-xs-6 col-sm-4 col-md-3 image-item" style="background-image: url(https://s3.amazonaws.com/sk8spotsmx/spots/{{ $image->name }})"></div>
+				<div class="col-xs-6 col-sm-4 col-md-3 image-item">
+					<figure style="background-image: url(https://s3.amazonaws.com/sk8spotsmx/spots/{{ $image->name }})"></figure>
+				</div>
 			@endforeach
 
 			@if(count($spot->images)==0)
