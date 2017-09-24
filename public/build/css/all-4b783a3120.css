@@ -219,8 +219,12 @@ body {
   background-color: rgba(22,91,92,0.2);
   background-size: cover;
   background-position: center center;
-  background-repeat: none;
+  background-repeat: no-repeat;
   height: 160px;
+}
+.last-one-home-item .photo.no-photo {
+  background-image: url("/images/icon-photography.png");
+  background-size: 75px;
 }
 .last-one-home-item .photo a {
   display: block;

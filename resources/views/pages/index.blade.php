@@ -34,11 +34,15 @@
 		@if($lastOnes)
 			@foreach($lastOnes as $lastOne)
 				<div class="col-sm-4 col-md-3 last-one-home-item">
-					<div class="photo" style="background-image: url(https://s3.amazonaws.com/sk8spotsmx/spots/{{ $lastOne->images()->get()->first()->name }})">
-						<a href="{{ url('spot').'/'.$lastOne->slug }}">
-							{{-- <img src="" alt="{{ $lastOne->title }}"> --}}
-						</a>
-					</div>
+					
+					@if(count($lastOne->images()->get()) != 0)
+						<div class="photo" style="background-image: url(https://s3.amazonaws.com/sk8spotsmx/spots/{{ $lastOne->images()->get()->first()->name }})">
+							<a href="{{ url('spot').'/'.$lastOne->slug }}"></a>
+						</div>
+					@else
+						<div class="photo no-photo"><a href="{{ url('spot').'/'.$lastOne->slug }}"></a></div>
+					@endif
+					
 					<div class="info">
 						<p><a href="{{ url('spot').'/'.$lastOne->slug }}">{{ $lastOne->title }} <span class="verde2">({{ $lastOne->category->name }})</span></a></p>
 						<p>Municipio: {{ $lastOne->city->name }}</p>
