@@ -17,12 +17,14 @@ elixir(function(mix) {
     mix.stylus('app.styl')
     .styles([
     	'bootstrap.css',
+        'fancybox.css',
         'icons-font.css',
     	'app.css'
     ],'public/css/all.css', 'public/css')
     .scripts([
     	'jquery.js',
     	'bootstrap.js',
+        'fancybox.js',
         'validate.js',
         'custom.js'
     ],'public/js/all.js', 'public/js')

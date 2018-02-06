@@ -56,7 +56,9 @@
 				
 			@foreach($spot->images as $image)
 				<div class="col-xs-6 col-sm-4 col-md-3 image-item">
-					<figure style="background-image: url(https://s3.amazonaws.com/sk8spotsmx/spots/{{ $image->name }})"></figure>
+					<a data-fancybox="spot-gallery" href="https://s3.amazonaws.com/sk8spotsmx/spots/{{ $image->name }}">
+						<figure style="background-image: url(https://s3.amazonaws.com/sk8spotsmx/spots/{{ $image->name }})"><img src="" alt=""></figure>
+					</a>
 				</div>
 			@endforeach
 
