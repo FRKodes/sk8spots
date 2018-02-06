@@ -18,11 +18,6 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				
-				@can('edit_cms')
-					<li><a href="{{ url('/admin')}}">Dashboard</a></li>
-					<li><a href="{{ url('/admin/users')}}">Usuarios</a></li>
-					<li><a href="{{ url('admin/spots')}}">Spots</a></li>
-				@endcan
 
 				@if (Auth::guest())
 					<li class="dropdown">
@@ -41,6 +36,13 @@
 				        </a>
 				        <ul class="dropdown-menu" role="menu">
 				        	<li><a href="{{ url('/perfil') }}">Mi Perfil</a></li>
+							@can('edit_cms')
+								<li class="dropdown-divider white text-right">----------------------------</li>
+								<li><a href="{{ url('/admin')}}">Dashboard</a></li>
+								<li><a href="{{ url('/admin/users')}}">Usuarios</a></li>
+								<li><a href="{{ url('admin/spots')}}">Spots</a></li>
+								<li class="dropdown-divider white text-right">----------------------------</li>
+							@endcan
 				        	<li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
 				        </ul>
 				    </li>
