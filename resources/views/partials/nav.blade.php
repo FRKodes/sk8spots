@@ -1,6 +1,5 @@
-<!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container">
+	<div class="container mayus">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			<span class="sr-only">Toggle navigation</span>
@@ -8,16 +7,15 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="{{ url('/') }}">Sk8SpotsMx</a>
+			<a class="navbar-brand" href="{{ url('/') }}">SK8SPOTSMX</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-				<li class="{{ (Request::path() == 'acerca-de') ? 'active' : '' }}"><a href="{{ url('/acerca-de') }}">Acerca de</a></li>
-				<li class="{{ (Request::path() == 'spot/create') ? 'active' : '' }}"><a href="{{ url('/spot/create') }}">Agrega un spot</a></li>
-				<li class="{{ (Request::path() == 'contacto') ? 'active' : '' }}"><a href="{{ url('/contacto') }}">Contacto</a></li>
-			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				
+				<li class="{{ (Request::path() == 'acerca-de') ? 'active' : '' }}"><a href="{{ url('/acerca-de') }}">Acerca de</a></li>
+				<li class="{{ (Request::path() == 'spots') ? 'active' : '' }}"><a href="{{ url('/spots') }}">Spots</a></li>
+				<li class="{{ (Request::path() == 'spot/create') ? 'active' : '' }}"><a href="{{ url('/spot/create') }}">Agrega un spot</a></li>
+				<li class="{{ (Request::path() == 'contacto') ? 'active' : '' }}"><a href="{{ url('/contacto') }}">Contacto</a></li>
 
 				@if (Auth::guest())
 					<li class="dropdown">
@@ -48,6 +46,6 @@
 				    </li>
 				@endif
 			</ul>
-		</div><!--/.nav-collapse -->
+		</div>
 	</div>
 </nav>

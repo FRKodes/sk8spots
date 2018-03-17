@@ -6,7 +6,6 @@
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 			<h1>Acerca de Sk8SpotsMX</h1>
 
-
 			<p class="m-top-20">
 				<strong>Sk8SpotsMx</strong> es mucho más que sólo un <strong>directorio de spots para patinar</strong> en tu ciudad, es una <strong>comunidad de skaters</strong> comprometidos con el <strong>estilo de vida</strong> que vivimos, que colabora con las <strong>ubicaciones de spots</strong> descubiertos por ellos mismos y/o amigos para el beneficio del <strong>skateboarding</strong> y de todos los que lo practicamos.
 			</p>

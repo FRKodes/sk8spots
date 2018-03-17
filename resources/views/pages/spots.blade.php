@@ -1,13 +1,12 @@
 @extends('app')
 
 @section('content')
-
-	@include('partials.cover-home')
+	<div class="container-fluid map">
+		<div class="row" id="map">
+		</div>
+	</div>
 
 	@include('partials.last-spots-added')
 
 	@include('partials.add-spot-button')
-
-	@include('partials.ig-feed')
-
 @endsection

@@ -6,10 +6,6 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<h1 class="text-center">Inicia sesión en tu cuenta</h1>
-
-			<p class="text-center">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius voluptates accusantium quos ad veritatis, nostrum facere eos, repellendus et animi ducimus obcaecati provident eveniet aspernatur dolorem molestiae optio officiis ab.
-			</p>
 		</div>
 	</div>
 	<hr>
@@ -22,7 +18,7 @@
 						{{ csrf_field() }}
 
 						<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-							<label for="email" class="col-md-4 control-label">E-Mail Address</label>
+							<label for="email" class="col-md-4 control-label">Correo electrónico</label>
 
 							<div class="col-md-6">
 								<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -36,7 +32,7 @@
 						</div>
 
 						<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-							<label for="password" class="col-md-4 control-label">Password</label>
+							<label for="password" class="col-md-4 control-label">Contraseña</label>
 
 							<div class="col-md-6">
 								<input id="password" type="password" class="form-control" name="password">
@@ -53,7 +49,7 @@
 							<div class="col-md-6 col-md-offset-4">
 								<div class="checkbox">
 									<label>
-										<input type="checkbox" name="remember"> Remember Me
+										<input type="checkbox" name="remember"> Recordarme
 									</label>
 								</div>
 							</div>
@@ -65,7 +61,7 @@
 									<i class="fa fa-btn fa-sign-in"></i> Login
 								</button>
 
-								<a class="btn btn-link green" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+								<a class="btn btn-link green" href="{{ url('/password/reset') }}">¿Olvidaste tu contraseña?</a>
 							</div>
 						</div>
 

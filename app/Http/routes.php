@@ -6,6 +6,8 @@ Route::get('contacto', 'PagesController@contacto');
 Route::post('send_contact_mail', 'PagesController@sendContactMail');
 Route::resource('spot', 'SpotController');
 Route::get('spot/{slug}', 'SpotController@show');
+Route::get('spots', 'PagesController@spots');
+Route::get('php', 'PagesController@php');
 
 Route::get('api/getspots', 'ApiController@getSpots');
 
