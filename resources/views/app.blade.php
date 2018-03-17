@@ -10,7 +10,7 @@
 	<header>@include('partials.nav')</header>
 	@include('partials.flash-message')
 	<section>@yield('content')</section>
-	<section>@include('partials.adsense')</section>
+	<section>@include('partials.add')</section>
 	<footer>@include('partials.footer')</footer>
 	@include('partials.google')
 	@include('partials.hotjar')

@@ -4,6 +4,8 @@
 
 	@include('partials.cover-home')
 
+	@include('partials.adsense')
+
 	@include('partials.last-spots-added')
 
 	@include('partials.add-spot-button')

@@ -440,6 +440,14 @@ body {
 textarea {
   resize: none;
 }
+.banner-bottom-container {
+  margin-bottom: 30px;
+}
+.banner-bottom-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 footer {
   color: #fff;
   background: #67cda7;
