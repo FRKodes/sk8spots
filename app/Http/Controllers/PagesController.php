@@ -15,7 +15,7 @@ class PagesController extends Controller
 		$instagram = new Instagram(env('IG_TOKEN'));
 		$posts = array_slice($instagram->get(), 0, 12);
 
-		$lastOnes = Spot::where('status', '=', 1)->orderBy('id', 'desc')->take(6)->get();
+		$lastOnes = Spot::where('status', '=', 1)->orderBy('id', 'desc')->take(12)->get();
 		return view('pages.index', compact('lastOnes', 'posts'));
 	}
 
