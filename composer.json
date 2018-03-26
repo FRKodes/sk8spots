@@ -12,7 +12,8 @@
         "league/flysystem-aws-s3-v3": "~1.0",
         "vinkla/instagram": "^8.0",
         "php-http/message": "^1.6",
-        "php-http/guzzle6-adapter": "^1.1"
+        "php-http/guzzle6-adapter": "^1.1",
+        "intervention/image": "^2.4"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

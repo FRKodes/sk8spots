@@ -6,7 +6,8 @@ use App\City;
 use App\State;
 use App\SpotCategory;
 use App\Country;
-use App\Image;
+// use App\Image;
+use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Filesystem\Filesystem;
@@ -81,7 +82,22 @@ class SpotController extends Controller
 				foreach ($photos as $photo) {
 					$imageFileName = time() . '-' . rand(1,100) . '.' . $photo->getClientOriginalExtension();
 					$filePath = '/spots/' . $imageFileName;
+					$filePath_360 = '/spots/360/' . $imageFileName;
 					$s3->put($filePath, file_get_contents($photo), 'public');
+
+					/*
+					 * Resizing images
+					*/
+					$img_resized = Image::make($photo);
+					$img_resized->resize(360, null, function ($constraint) {
+					    $constraint->aspectRatio();
+					})->encode('jpg');
+					$img_resized->save();
+
+					dd($img_resized);
+
+					$s3->put($filePath_360, file_get_contents($img_resized->dirname), 'public'); /*uploading to S3*/
+					// return $img->response('jpg');
 
 					$spot->images()->create(['name' => $imageFileName]);
 					//each file needs to be attached to the spot in the db
