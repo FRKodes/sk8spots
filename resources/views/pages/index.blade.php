@@ -10,4 +10,6 @@
 
 	@include('partials.add-spot-button')
 
+	@include('partials.ig-feed')
+
 @endsection
