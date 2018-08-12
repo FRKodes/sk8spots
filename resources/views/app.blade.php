@@ -4,7 +4,7 @@
 	@include('partials.metas')
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="{{ elixir("css/all.css") }}">
-	<title>Sk8spotsMx - @yield('titlepage', 'Noticias y videos sobre skateboarding de México y el mundo, Directorio de Skate Spots')</title>
+	<title>Sk8SpotsMx - @yield('titlepage', 'Noticias y videos sobre skateboarding de México y el mundo, Directorio de Skate Spots')</title>
 </head>
 <body>
 	<header>@include('partials.nav')</header>
